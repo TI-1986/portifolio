@@ -79,7 +79,7 @@ nav .grid {
 .logo {
   width: 1.8rem;
   height: 1.8rem;
-  margin: 0rem 0rem -0.3rem 5rem;
+  margin: 0rem 0rem -0.5rem 6rem;
 }
 
 a {
@@ -106,26 +106,25 @@ a:hover,
   position: absolute;
   display: flex;
   align-items: center;
-
+  gap: 2rem;
   width: 90%;
   max-width: 1920px;
   height: 32.8rem;
   margin: 10.5rem 5rem;
-  border: 1rem solid;
 
   font-family: var(--title-font);
   color: var(--texto-color);
 }
+
 .perfil h1 {
   font-size: var(--title-font-size);
-
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .perfil p {
   font-size: var(--paragrafo-font-size);
-
-  padding: 2rem;
+  margin-top: -1rem;
+  padding: 1rem;
 }
 
 .profile {
@@ -134,9 +133,43 @@ a:hover,
   height: 30rem;
   left: 68%;
 
-  order: 1;
-  flex-grow: 0;
   border-radius: 50%;
+}
+
+.profile:hover {
+  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+}
+
+#link {
+  width: 90%;
+  max-width: 1920px;
+
+  align-items: center;
+}
+
+#link {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.link {
+  padding: 1rem 3rem 0rem 0rem;
+  margin: 0 1rem;
+  font-family: var(--title-font);
+  font-size: var(--paragrafo-font-size);
+  color: var(--texto-color);
+  font-weight: 500;
+}
+
+.link:hover {
+  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+}
+
+.social {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 #home {
