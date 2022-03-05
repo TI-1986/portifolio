@@ -107,21 +107,23 @@ a:hover,
   display: flex;
   align-items: center;
   gap: 2rem;
-  width: 90%;
+  width: 100%;
   max-width: 1920px;
-  height: 32.8rem;
-  margin: 10.5rem 5rem;
+  height: 32.9rem;
+  margin: 5rem 5rem;
 
   font-family: var(--title-font);
   color: var(--texto-color);
 }
 
 .perfil h1 {
+  width: 100%;
   font-size: var(--title-font-size);
   padding: 1rem;
 }
 
 .perfil p {
+  width: 100%;
   font-size: var(--paragrafo-font-size);
   margin-top: -1rem;
   padding: 1rem;
@@ -129,9 +131,9 @@ a:hover,
 
 .profile {
   position: absolute;
-  width: 30rem;
-  height: 30rem;
-  left: 68%;
+  width: 25rem;
+  height: 25rem;
+  left: 65%;
 
   border-radius: 50%;
 }
@@ -141,15 +143,8 @@ a:hover,
 }
 
 #link {
-  width: 90%;
-  max-width: 1920px;
-
-  align-items: center;
-}
-
-#link {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .link {
@@ -178,12 +173,24 @@ a:hover,
   align-items: center;
   width: 100%;
   max-width: 1920px;
-  height: 32.5rem;
-  margin: 45rem 0rem;
+  height: 18rem;
+  margin: 52rem 0rem;
+
+  font-family: var(--title-font);
+  font-size: var(--paragrafo-font-size);
+  color: var(--texto-color);
+  font-weight: 400;
+  text-align: justify;
 }
 
 #sobre {
   width: 100%;
   height: 32.5rem;
   background: var(--base-color-second);
+  padding: 5rem;
+}
+
+#sobre p {
+  width: 80%;
+  text-align: justify;
 }
