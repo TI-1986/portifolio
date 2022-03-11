@@ -61,7 +61,7 @@ body {
   position: absolute;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1336px;
   height: 4.3rem;
   padding: 0.5rem;
   gap: 1.5rem;
@@ -72,7 +72,8 @@ nav .grid {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 90%;
+  width: 100%;
+  max-width: 1336px;
   padding: 0.5rem;
   margin: 3.5rem;
 }
@@ -109,7 +110,7 @@ a:hover,
   align-items: center;
   gap: 2rem;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1336px;
   height: 32.9rem;
   margin: 5rem 5rem;
 
@@ -156,7 +157,6 @@ a:hover,
   font-size: var(--paragrafo-font-size);
   color: var(--texto-color);
   font-weight: 500;
-  transition: 05s;
 }
 
 .link:hover {
@@ -175,7 +175,7 @@ a:hover,
   position: absolute;
   align-items: center;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1336px;
   height: 18rem;
   margin: 52rem 0rem;
 
@@ -188,6 +188,7 @@ a:hover,
 
 #sobre {
   width: 100%;
+  max-width: 1336px;
   height: 44rem;
   background: var(--base-color-second);
   padding: 5rem;
@@ -201,6 +202,7 @@ a:hover,
 #skills {
   position: absolute;
   width: 100%;
+  max-width: 1336px;
   height: 20rem;
   margin: 85rem 5rem;
   align-items: center;
@@ -217,6 +219,7 @@ a:hover,
 #hobbies {
   position: absolute;
   width: 100%;
+  max-width: 1336px;
   height: 20rem;
   margin: 105rem 5rem;
   align-items: center;
@@ -228,11 +231,10 @@ a:hover,
 
 .cards {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: center;
   padding: 0rem;
   gap: 2rem;
-  margin: 2rem 30%;
+  margin: 2rem 5rem;
 }
 
 .card {
@@ -268,15 +270,26 @@ a:hover,
 #formacao {
   position: absolute;
   width: 100%;
-  height: 30rem;
+  max-width: 1336px;
+  height: 35rem;
   margin: 130rem 0rem;
+  align-items: center;
+  text-align: justify;
+
   background: var(--base-color-second);
+  font-family: var(--title-font);
+  color: var(--texto-color);
+  font-weight: 500;
+}
+
+#formacao h3 {
+  margin: 2rem;
 }
 
 .big-cards {
   position: absolute;
   display: flex;
-  margin: 5rem 15rem;
+  margin: 0.1rem 16rem;
 }
 
 .big-card {
@@ -284,21 +297,57 @@ a:hover,
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+
+  margin: 0 1rem;
   background: var(--back-cards);
   border-radius: 5%;
 
   position: static;
   width: 23rem;
   height: 18rem;
-  margin: auto;
-}
-.title-card {
-  display: block;
-  margin: 25rem 5rem;
 }
 
 .big-cards img {
   width: 10rem;
   height: 10rem;
+}
+
+.title1 {
+  width: 15rem;
+  position: absolute;
+  margin: 19rem 43rem;
+}
+
+.title1 h4,
+.title2 h4 {
+  font-size: var(--menu-font-size);
+}
+
+.title2 {
+  position: absolute;
+  margin: 19rem 18rem;
+}
+
+#contato {
+  position: absolute;
+  width: 100%;
+  max-width: 1336px;
+  margin: 190rem 0rem;
+}
+
+form {
+  margin: 40px 0;
+}
+
+form label {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+form input {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
 }

@@ -17,11 +17,11 @@
       <nav id="container">
         <div id="menu">
           <ul class="grid">
-            <li><a class="title" href="'#"> Sobre mim</a></li>
-            <li><a class="title" href="'#skills">Skills</a></li>
-            <li><a class="title" href="'#hobbies">Hobbies</a></li>
-            <li><a class="title" href="'#formacao">Formação</a></li>
-            <li><a class="title" href="'#projetos">Projetos</a></li>
+            <li><a class="menu" href="'#home"> Sobre mim</a></li>
+            <li><a class="menu" href="'#skills">Skills</a></li>
+            <li><a class="menu" href="'#hobbies">Hobbies</a></li>
+            <li><a class="menu" href="'#formacao">Formação</a></li>
+            <li><a class="menu" href="'#projetos">Projetos</a></li>
             <li>
               <a class="contato" href="mailto:ti.1986@hotmail.com"
                 >ti.1986@hotmail.com</a
@@ -133,22 +133,35 @@
           <div class="big-card">
             <img src="./assets/icon-unopar.svg" alt="logo Unopar" />
           </div>
-          <h4 class="tilte-card">
-            Tecnologo em Analise e <br />Desenvolvimento de Sistemas
-          </h4>
-          <p>2019-Unopar</p>
 
           <div class="big-card">
             <img src="./assets/icon-alura.svg" alt="logo Alura" />
           </div>
-          <h4 class="tilte-card">
-            Projeto Oracle One<br />
-            em Parceria com a Alura.
-          </h4>
+        </div>
+        <div class="title1">
+          <h4>Projeto Oracle One<br />em Parceria com a Alura.</h4>
           <p>2022-Alura</p>
+        </div>
+        <div class="title2">
+          <h4>Tecnologo em Analise e <br />Desenvolvimento de Sistemas</h4>
+          <p>2019-Unopar</p>
         </div>
       </section>
       <section class="section" id="projetos"></section>
+      <section class="section" id="contato">
+        <form>
+          <label for="nome">Nome e sobrenome</label>
+          <input type="text" id="nome" />
+
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" />
+
+          <input type="submit" value="Enviar formulário" />
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>
