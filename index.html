@@ -7,6 +7,7 @@
     <title>Portifolio - Challenge Oracle+Alura</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets" />
   </head>
   <body>
     <header id="header">
@@ -14,14 +15,14 @@
         <img class="logo" src="./assets/icon-name.svg" alt="estrelas" />
         <a href="#" class="name">Tiago de Oliveira</a>
       </div>
-      <nav id="container">
+      <nav class="container">
         <div id="menu">
           <ul class="grid">
-            <li><a class="menu" href="'#home"> Sobre mim</a></li>
-            <li><a class="menu" href="'#skills">Skills</a></li>
-            <li><a class="menu" href="'#hobbies">Hobbies</a></li>
-            <li><a class="menu" href="'#formacao">Formação</a></li>
-            <li><a class="menu" href="'#projetos">Projetos</a></li>
+            <li><a class="menu" href="#home"> Sobre mim</a></li>
+            <li><a class="menu" href="#skills">Skills</a></li>
+            <li><a class="menu" href="#hobbies">Hobbies</a></li>
+            <li><a class="menu" href="#formacao">Formação</a></li>
+            <li><a class="menu" href="#projetos">Projetos</a></li>
             <li>
               <a class="contato" href="mailto:ti.1986@hotmail.com"
                 >ti.1986@hotmail.com</a
@@ -32,38 +33,52 @@
       </nav>
     </header>
     <main>
-      <div class="perfil">
-        <div class="principal">
-          <h1 class="title">
-            Olá, meu nome é Tiago de<br />
-            Oliveira, construo páginas web!
-          </h1>
-          <p>
-            Eu sou formado em Analise e Desenvolvimento de Sistemas<br />
-            e atualmente estou participando no projeto Oracle ONE na Alura.
-          </p>
-          <div class="" id="link">
-            <a href="https://github.com/TI-1986" class="link" target="blank"
-              >Github<img src="./assets/icon-seta.svg" alt="" class="social"
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/tiago-de-oliveira-59648b172/"
-              class="link"
-              target="blank"
-              >Linkedin<img src="./assets/icon-seta.svg" alt="" class="social"
-            /></a>
-            <a href="#" class="link" target="blank"
-              >Instagram<img src="./assets/icon-seta.svg" alt="" class="social"
-            /></a>
-            <a href="#" class="link" target="blank"
-              >Curriculo<img src="./assets/icon-seta.svg" alt="" class="social"
-            /></a>
+      <section class="section" id="home">
+        <div class="perfil">
+          <div class="principal">
+            <h1 class="title">
+              Olá, meu nome é Tiago de<br />
+              Oliveira, construo páginas web!
+            </h1>
+            <p>
+              Eu sou formado em Analise e Desenvolvimento de Sistemas<br />
+              e atualmente estou participando no projeto Oracle ONE na Alura.
+            </p>
+            <div class="" id="link">
+              <a href="https://github.com/TI-1986" class="link" target="blank"
+                >Github<img src="./assets/icon-seta.svg" alt="" class="social"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/tiago-de-oliveira-59648b172/"
+                class="link"
+                target="blank"
+                >Linkedin<img
+                  src="./assets/icon-seta.svg"
+                  alt=""
+                  class="social"
+              /></a>
+              <a href="#" class="link" target="blank"
+                >Instagram<img
+                  src="./assets/icon-seta.svg"
+                  alt=""
+                  class="social"
+              /></a>
+              <a href="#" class="link" target="blank"
+                >Curriculo<img
+                  src="./assets/icon-seta.svg"
+                  alt=""
+                  class="social"
+              /></a>
+            </div>
           </div>
+
+          <img
+            src="./assets/profile.jpg"
+            alt=" foto de rosto"
+            class="profile"
+          />
         </div>
 
-        <img src="./assets/profile.jpg" alt=" foto de rosto" class="profile" />
-      </div>
-      <section class="section" id="home">
         <div id="sobre">
           <h2>Sobre mim</h2>
           <p>
@@ -127,7 +142,7 @@
         </div>
       </section>
       <section class="section" id="formacao">
-        <h3>Formação Academica</h3>
+        <h3>Formação Acadêmica</h3>
 
         <div class="big-cards">
           <div class="big-card">
@@ -163,6 +178,11 @@
         </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>©2022 por Tiago de Oliveira</p>
+      <a href="#home" class="back-to-top"
+        ><img src="./assets/icon-arrow-up.svg" alt=""
+      /></a>
+    </footer>
   </body>
 </html>

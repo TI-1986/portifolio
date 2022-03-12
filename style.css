@@ -33,9 +33,9 @@ img {
   --button-color-2light: hsla(215, 79%, 91%, 1);
 
   /* fonts */
-  --title-font-size: 3.25rem;
+  --title-font-size: 3rem;
   --menu-font-size: 1rem;
-  --paragrafo-font-size: 1.5rem;
+  --paragrafo-font-size: 1.2em;
 
   --title-font: 'Raleway', sans-serif;
 }
@@ -104,15 +104,31 @@ a:hover,
   font-weight: 700;
 }
 
+#home {
+  display: inline-block;
+  position: absolute;
+
+  align-items: center;
+  width: 100%;
+  max-width: 1336px;
+  height: 50rem;
+  margin: 8rem 0rem;
+
+  font-family: var(--title-font);
+  font-size: var(--paragrafo-font-size);
+  color: var(--texto-color);
+  font-weight: 400;
+  text-align: justify;
+}
 .perfil {
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 2rem;
+
   width: 100%;
   max-width: 1336px;
-  height: 32.9rem;
-  margin: 5rem 5rem;
+  height: 20rem;
+  padding: 0rem 6rem;
 
   font-family: var(--title-font);
   color: var(--texto-color);
@@ -133,12 +149,11 @@ a:hover,
 
 .profile {
   position: absolute;
-  width: 25rem;
-  height: 25rem;
-  left: 65%;
+  width: 20rem;
+  height: 20rem;
+  left: 70%;
 
   border-radius: 50%;
-  transition: 0.5s;
 }
 
 .profile:hover {
@@ -165,33 +180,18 @@ a:hover,
 
 .social {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.7rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-#home {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  width: 100%;
-  max-width: 1336px;
-  height: 18rem;
-  margin: 52rem 0rem;
-
-  font-family: var(--title-font);
-  font-size: var(--paragrafo-font-size);
-  color: var(--texto-color);
-  font-weight: 400;
-  text-align: justify;
 }
 
 #sobre {
   width: 100%;
   max-width: 1336px;
-  height: 44rem;
+  height: 25rem;
   background: var(--base-color-second);
-  padding: 5rem;
+  margin-top: 21rem;
+  padding: 2rem 7rem;
 }
 
 #sobre p {
@@ -204,7 +204,7 @@ a:hover,
   width: 100%;
   max-width: 1336px;
   height: 20rem;
-  margin: 85rem 5rem;
+  margin: 55rem 5rem;
   align-items: center;
 }
 .section h3 {
@@ -221,7 +221,7 @@ a:hover,
   width: 100%;
   max-width: 1336px;
   height: 20rem;
-  margin: 105rem 5rem;
+  margin: 75rem 5rem;
   align-items: center;
 }
 
@@ -272,9 +272,7 @@ a:hover,
   width: 100%;
   max-width: 1336px;
   height: 35rem;
-  margin: 130rem 0rem;
-  align-items: center;
-  text-align: justify;
+  margin: 92rem 0rem;
 
   background: var(--base-color-second);
   font-family: var(--title-font);
@@ -283,13 +281,18 @@ a:hover,
 }
 
 #formacao h3 {
-  margin: 2rem;
+  padding: 2rem;
+  margin-left: 8rem;
+  justify-content: center;
 }
 
 .big-cards {
+  width: 100%;
+  max-width: 1336px;
   position: absolute;
   display: flex;
-  margin: 0.1rem 16rem;
+
+  margin: 0.1rem 20rem;
 }
 
 .big-card {
@@ -315,7 +318,7 @@ a:hover,
 .title1 {
   width: 15rem;
   position: absolute;
-  margin: 19rem 43rem;
+  margin: 19rem 46rem;
 }
 
 .title1 h4,
@@ -323,9 +326,15 @@ a:hover,
   font-size: var(--menu-font-size);
 }
 
+.title1 p,
+.title2 p {
+  text-align: justify;
+  font-size: var(--paragrafo-font-size);
+}
+
 .title2 {
   position: absolute;
-  margin: 19rem 18rem;
+  margin: 19rem 21rem;
 }
 
 #contato {
@@ -333,6 +342,7 @@ a:hover,
   width: 100%;
   max-width: 1336px;
   margin: 190rem 0rem;
+  background: var(--base-color-second);
 }
 
 form {
@@ -350,4 +360,36 @@ form input {
   margin: 0 0 20px;
   padding: 10px 25px;
   width: 50%;
+}
+
+/* Back to top */
+.back-to-top {
+  background: var(--button-color);
+  color: var(--back-cards);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+footer {
+  position: absolute;
+  margin-top: 150rem;
 }
