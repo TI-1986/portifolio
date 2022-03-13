@@ -31,28 +31,6 @@ function changeHeaderWhenScroll() {
   }
 }
 
-/* Testimonials carousel slider swiper */
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  pagination: {
-    el: '.swiper-pagination'
-  },
-  
-  mousewheel: true,
-  keyboard: true,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      setWrapperSize: true
-    }
-  },
-  hashNavigation: true,
-  a11y: {
-    prevSlideMessage: 'Previous slide',
-    nextSlideMessage: 'Next slide',
-  }
-})
-
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -62,11 +40,12 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-  `#home .image, #home .text,
-  #about .image, #about .text,
-  #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
+  `#home .perfil, #sobre p,
+  #skills .cards, #skills .card,
+  #hobbies .cards, #hobbies .card,
+  #formacao big-cards, #formacao .big-card,
+  #contato label, #contato .input,
+  #projetos .projeto, #projetos .link
   footer .brand, footer .social
   `,
   { interval: 100 }
@@ -114,5 +93,3 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
-
-
