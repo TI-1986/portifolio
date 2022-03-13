@@ -170,26 +170,42 @@
       </section>
       <section class="section" id="projetos"></section>
       <section class="section" id="contato">
+        <img src="./assets/icon_chat_chatting_macbook.svg" alt="" />
+
         <form>
-          <label for="nome">Nome e sobrenome</label>
-          <input type="text" id="nome" />
+          <h3>Contato</h3>
 
-          <label for="email">Email</label>
-          <input type="text" id="email" />
+          <p>Quer entrar em contato comigo?</p>
 
-          <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" />
+          <p>
+            Preencha o formulário ao lado e entrarei em contato o mais rápido
+            possivel.
+          </p>
 
-          <input type="submit" value="Enviar formulário" />
+          <input type="text" id="nome" placeholder="Nome" />
+
+          <input type="text" id="email" placeholder="E-mail" />
+
+          <input type="text" id="assunto" placeholder="assunto" />
+
+          <textarea
+            name="mensagem"
+            id="msg"
+            cols="60"
+            rows="10"
+            placeholder="Mensagem"
+          ></textarea>
+
+          <a href="#" class="button"></a>
         </form>
       </section>
     </main>
+
+    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
     <footer>
       <p>©2022 por Tiago de Oliveira</p>
     </footer>
-    <a href="#home" class="back-to-top"
-      ><img src="./assets/icon-arrow-up.svg" alt=""
-    /></a>
 
     <!-- main.js -->
     <script src="./js/main.js"></script>

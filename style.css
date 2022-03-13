@@ -343,28 +343,70 @@ a:hover,
 }
 
 #contato {
+  display: flex;
   position: absolute;
   width: 100%;
-  max-width: 1336px;
-  margin: 190rem 0rem;
+  max-width: 1360px;
+  margin: 160rem 0rem;
   background: var(--base-color-second);
+}
+#contato img {
+  width: 40rem;
+  height: 50rem;
+  padding: 3rem;
+  margin-top: -5rem;
+}
+
+#contato p {
+  display: block;
 }
 
 form {
-  margin: 40px 0;
+  width: 90rem;
+  height: 30rem;
+  margin: 10rem 5rem;
 }
 
-form label {
-  display: block;
-  font-size: 20px;
-  margin: 0 0 10px;
+form textarea {
+  position: static;
+  width: 656px;
+  height: 133px;
+  left: calc(50% - 656px / 2);
+  top: 0px;
+
+  /* Preto/branco */
+
+  background: #ffffff;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
 }
 
 form input {
-  display: block;
-  margin: 0 0 20px;
-  padding: 10px 25px;
-  width: 50%;
+  position: static;
+  width: 656px;
+  height: 56px;
+  left: calc(50% - 656px / 2);
+  top: 0px;
+
+  /* Preto/branco */
+
+  background: var(--back-cards);
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
 }
 
 /* Back to top */
@@ -373,7 +415,7 @@ form input {
   height: 2rem;
 }
 .back-to-top {
-  background: var(--button-color);
+  background: var(--texto-color);
   color: var(--back-cards);
 
   position: fixed;
@@ -398,6 +440,7 @@ form input {
   opacity: 1;
   transform: translateY(0);
 }
+
 footer {
   position: absolute;
   margin-top: 150rem;
