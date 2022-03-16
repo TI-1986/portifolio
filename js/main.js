@@ -93,3 +93,13 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+
+/**enviar form**/
+document.getElementById('contatoForm').addEventListener('submit', function () {
+  var nome = this.querySelector('input[name=nome]'),
+    nome = nome.value
+  var email = this.querySelector('input[name=email]'),
+    email = email.value
+  var texto = this.querySelector('textarea[name=msg]')
+  this.querySelector('input[name=assunto]').setAttribute('value', texto)
+})

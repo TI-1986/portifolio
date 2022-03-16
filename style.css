@@ -92,7 +92,7 @@ a {
 
 a:hover,
 .logo:hover {
-  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+  filter: drop-shadow(0px 4px 4px #1e69ca);
 }
 
 .name {
@@ -204,14 +204,6 @@ a:hover,
   margin: 0.5rem 5rem;
 }
 
-#skills {
-  position: absolute;
-  width: 100%;
-  max-width: 1336px;
-  height: 20rem;
-  margin: 55rem 5rem;
-  align-items: center;
-}
 .section h3 {
   display: flex;
   justify-content: center;
@@ -219,6 +211,14 @@ a:hover,
   font-size: var(--title-font-size);
   color: var(--texto-color);
   font-weight: 700;
+}
+#skills {
+  position: absolute;
+  width: 100%;
+  max-width: 1336px;
+  height: 20rem;
+  margin: 55rem 5rem;
+  align-items: center;
 }
 
 #hobbies {
@@ -231,13 +231,13 @@ a:hover,
 }
 
 #hobbies .cards {
-  margin: 2rem 15rem;
+  display: flex;
+  justify-content: center;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  padding: 0rem;
   gap: 2rem;
   margin: 2rem 5rem;
 }
@@ -255,6 +255,8 @@ a:hover,
 
 .card:hover {
   filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+  width: 15rem;
+  height: 12rem;
 }
 
 .card img {
@@ -277,7 +279,7 @@ a:hover,
   width: 100%;
   max-width: 1336px;
   height: 35rem;
-  margin: 92rem 0rem;
+  margin: 100rem 0rem;
 
   background: var(--base-color-second);
   font-family: var(--title-font);
@@ -342,71 +344,128 @@ a:hover,
   margin: 19rem 21rem;
 }
 
+#projetos {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  max-width: 1336px;
+  height: 20rem;
+  margin: 120rem;
+}
+
 #contato {
   display: flex;
   position: absolute;
+  align-items: center;
   width: 100%;
-  max-width: 1360px;
+  max-width: 1336px;
   margin: 160rem 0rem;
   background: var(--base-color-second);
+
+  font-family: var(--title-font);
+  color: var(--texto-color);
 }
+
 #contato img {
   width: 40rem;
-  height: 50rem;
-  padding: 3rem;
-  margin-top: -5rem;
+  height: 65rem;
 }
 
 #contato p {
   display: block;
+
+  font-size: var(--paragrafo-font-size);
 }
 
 form {
   width: 90rem;
   height: 30rem;
-  margin: 10rem 5rem;
+
+  justify-content: left;
+}
+
+form h3 {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  margin-top: -5rem;
+}
+
+form .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  position: static;
+  width: 15rem;
+  height: 5rem;
+
+  top: 32rem;
+
+  background: var(--button-color);
+  font-size: var(--menu-font-size);
+  color: var(--back-cards);
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  border-radius: 0.5rem;
+  margin: 2rem 1.2rem;
+}
+
+textarea::placeholder,
+input::placeholder {
+  display: flex;
+  position: absolute;
+  text-align: justify;
+  padding: 1rem;
+  font-family: var(--title-font);
+  font-size: var(--menu-font-size);
+}
+textarea:hover,
+input:hover {
+  border-bottom: 2px solid #1e69ca;
+}
+
+textarea:hover::placeholder,
+input:hover::placeholder {
+  color: var(--button-color);
+  padding: 0rem 1rem;
+  font-weight: 500;
 }
 
 form textarea {
   position: static;
-  width: 656px;
-  height: 133px;
-  left: calc(50% - 656px / 2);
-  top: 0px;
+  width: 41rem;
+  height: 8rem;
+  left: calc(50% - 41rem / 2);
 
-  /* Preto/branco */
+  background: var(--back-cards);
+  border-radius: 0.25rem;
+  margin: 0.5rem 1rem;
+  resize: none;
+  border: none;
+}
 
-  background: #ffffff;
-  border-radius: 4px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 8px 0px;
+textarea:focus,
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
 
 form input {
   position: static;
-  width: 656px;
-  height: 56px;
-  left: calc(50% - 656px / 2);
-  top: 0px;
-
-  /* Preto/branco */
+  width: 41rem;
+  height: 3.5rem;
+  left: calc(50% - 41rem / 2);
 
   background: var(--back-cards);
-  border-radius: 4px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 8px 0px;
+  border-radius: 0.25rem;
+  border: none;
+  border-style: none;
+  margin: 0.5rem 1rem;
 }
 
 /* Back to top */
@@ -443,5 +502,5 @@ form input {
 
 footer {
   position: absolute;
-  margin-top: 150rem;
+  margin-top: 220rem;
 }
