@@ -94,12 +94,22 @@ window.addEventListener('scroll', function () {
   activateMenuAtCurrentSection()
 })
 
+/**validar form**/
+
+function validarDados() {
+  window.event.preventDefault()
+
+  if (document.form.nome.value == '') {
+    alert('Campo obrigatorio')
+    document.#contatoForm.nome.focus()
+  } else if (
+    document.#contatoForm.email.value.indexOf('@') == -1 ||
+    document.#contatoForm.email.value.indexOf('.') == -1
+  ) {
+    alert('email invalido')
+  }
+}
+
+document.querySelector('contatoForm').addEventListener('submit', validarDados)
+
 /**enviar form**/
-document.getElementById('contatoForm').addEventListener('submit', function () {
-  var nome = this.querySelector('input[name=nome]'),
-    nome = nome.value
-  var email = this.querySelector('input[name=email]'),
-    email = email.value
-  var texto = this.querySelector('textarea[name=msg]')
-  this.querySelector('input[name=assunto]').setAttribute('value', texto)
-})

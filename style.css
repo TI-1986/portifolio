@@ -422,10 +422,11 @@ a:hover,
   display: flex;
   position: absolute;
   justify-content: space-between;
-  align-items: center;
+
+  padding: 1rem;
   width: 100%;
   max-width: 1336px;
-  height: 50rem;
+  height: 42rem;
   margin: 282rem 0rem;
 
   background: var(--base-color-second);
@@ -434,43 +435,31 @@ a:hover,
   color: var(--texto-color);
 }
 
-#contato img {
-  position: absolute;
-  justify-content: center;
-  width: 35rem;
-  height: 55rem;
+#contato .img-form {
+  display: flex;
+  align-items: center;
+  width: 30rem;
+  height: 38rem;
 }
 
-.info {
+#contato .info {
   display: block;
-  margin: -2rem 1rem;
-  padding-bottom: ;
+  padding: 1rem;
+  width: 50rem;
+  gap: 2rem;
 }
-.info h3 {
-  position: absolute;
-  display: block;
-  margin-top: -3.5rem;
+
+#contato .info h3 {
+  justify-content: left;
+  margin: 0.5rem 1rem;
 }
 
 .info p {
-  padding: 0.2rem;
+  margin: 0.2rem 1rem;
   font-size: var(--paragrafo-font-size);
 }
 
-form {
-  width: 90rem;
-  height: 30rem;
-  margin: 0 35rem;
-  justify-content: flex-end;
-}
-
-form h3 {
-  display: flex;
-  position: absolute;
-  justify-content: flex-start;
-}
-
-form .button {
+.info button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -481,8 +470,6 @@ form .button {
   width: 15rem;
   height: 5rem;
 
-  top: 32rem;
-
   background: var(--button-color);
   font-size: var(--menu-font-size);
   color: var(--back-cards);
@@ -490,7 +477,7 @@ form .button {
   order: 2;
   flex-grow: 0;
   border-radius: 0.5rem;
-  margin: 2rem 1.2rem;
+  margin: 0.3rem 1.2rem;
 }
 
 textarea::placeholder,

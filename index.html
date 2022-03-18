@@ -26,7 +26,7 @@
             <li><a class="menu" href="#formacao">Formação</a></li>
             <li><a class="menu" href="#projetos">Projetos</a></li>
             <li>
-              <a class="contato" href="mailto:ti.1986@hotmail.com"
+              <a class="contato" href="#contato"
                 ><i class="icon-outlook"></i> ti.1986@hotmail.com</a
               >
             </li>
@@ -190,16 +190,11 @@
         
       </section>
       <section class="section" id="contato">
+        <div class="img-form">        <img src="./assets/icon_chat_chatting_macbook.svg" alt="" />
+        </div>
 
-        <img src="./assets/icon_chat_chatting_macbook.svg" alt="" />
         
-        
-        <form
-        id="contatoForm"
-        method="get"
-        action="mailto:ti.1986@hotmail.com"
-        target="_blank"
-        >
+      
         <div class="info">
           <h3>Contato</h3>
   
@@ -209,14 +204,16 @@
             possivel.
           </p>
 
-        </div>
-         
-
+          <form
+          id="contatoForm" method="post"
+          action="mailto:ti.1986@hotmail.com"
+          target="_blank" >
+            
           <input type="text" id="nome" placeholder="Nome" />
 
-          <input type="text" id="email" placeholder="E-mail" />
+          <input type="email" id="email" placeholder="E-mail" />
 
-          <input type="text" id="assunto" placeholder="assunto" />
+          <input type="text" id="assunto" placeholder="Assunto" />
 
           <textarea
             name="mensagem"
@@ -226,8 +223,9 @@
             placeholder="Mensagem"
           ></textarea>
 
-          <a href="#" class="button">Enviar mensagem</a>
+          <button class="button" type="submit" id="submit">Enviar mensagem</button>
         </form>
+      </div>
       </section>
     </main>
 
@@ -238,6 +236,6 @@
     </footer>
 
     <!-- main.js -->
-    <script src="./js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
