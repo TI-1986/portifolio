@@ -99,7 +99,7 @@ window.addEventListener('scroll', function () {
 function validarDados() {
   window.event.preventDefault()
 
-  if (document.form.nome.value == '') {
+  if (document.#contatoForm.nome.value == '') {
     alert('Campo obrigatorio')
     document.#contatoForm.nome.focus()
   } else if (
