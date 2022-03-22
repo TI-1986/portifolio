@@ -17,45 +17,11 @@ for (const link of links) {
   })
 }
 
-/* mudar o header da página quando der scroll */
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-function changeHeaderWhenScroll() {
-  if (window.scrollY >= navHeight) {
-    // scroll é maior que a altura do header
-    header.classList.add('scroll')
-  } else {
-    // menor que a altura do header
-    header.classList.remove('scroll')
-  }
-}
-
-/* ScrollReveal: Mostrar elementos quando der scroll na página */
-const scrollReveal = ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700,
-  reset: true
-})
-
-scrollReveal.reveal(
-  `#home .perfil, #sobre p,
-  #skills .cards, #skills .card,
-  #hobbies .cards, #hobbies .card,
-  #formacao big-cards, #formacao .big-card,
-  #contato label, #contato .input,
-  #projetos .projeto, #projetos .link
-  footer .brand, footer .social
-  `,
-  { interval: 100 }
-)
-
 /* Botão voltar para o topo */
 const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
-  if (window.scrollY >= 560) {
+  if (window.scrollY >= 60) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
@@ -87,29 +53,14 @@ function activateMenuAtCurrentSection() {
   }
 }
 
-/* When Scroll */
-window.addEventListener('scroll', function () {
-  changeHeaderWhenScroll()
-  backToTop()
-  activateMenuAtCurrentSection()
-})
-
 /**validar form**/
 
 function validarDados() {
-  window.event.preventDefault()
+  var nome = document.getElementById(input)
 
-  if (document.#contatoForm.nome.value == '') {
-    alert('Campo obrigatorio')
-    document.#contatoForm.nome.focus()
-  } else if (
-    document.#contatoForm.email.value.indexOf('@') == -1 ||
-    document.#contatoForm.email.value.indexOf('.') == -1
-  ) {
-    alert('email invalido')
+  if (nome.value == '') {
+    alert('Nome não inforrmado')
+    nome.focus()
   }
 }
-
-document.querySelector('contatoForm').addEventListener('submit', validarDados)
-
 /**enviar form**/
