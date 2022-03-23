@@ -205,9 +205,9 @@ nav .grid {
 }
 
 #sobre img {
-  width: 8rem;
-  height: 5rem;
-  margin: 0.5rem 5rem;
+  width: 12rem;
+  height: 9rem;
+  margin: 0.3rem 5rem;
 }
 
 .section h3 {
@@ -394,6 +394,8 @@ nav .grid {
   height: 22rem;
   justify-items: center;
   align-items: center;
+  text-align: center;
+
   margin: 0.8rem 0;
   padding-top: 3.5rem;
   visibility: visible;
@@ -424,20 +426,20 @@ nav .grid {
   color: var(--texto-color);
 }
 
-.projeto-title .button {
+.button {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0rem;
-
+  gap: 0.4rem;
   position: static;
   width: 12rem;
   height: 4rem;
 
   top: 32rem;
 
-  background: var(--button-color);
+  background: var(--button-color-light);
   font-size: var(--menu-font-size);
   color: var(--back-cards);
   flex: content;
@@ -445,8 +447,10 @@ nav .grid {
   flex-grow: 0;
   border-radius: 0.5rem;
   margin: auto;
+  transition: 1s;
 }
-.projeto-title .button-ligth {
+
+.button-ligth {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -460,7 +464,7 @@ nav .grid {
 
   top: 32rem;
 
-  background: var(--button-color-light);
+  background: var(--button-color);
   font-size: var(--menu-font-size);
   color: var(--back-cards);
   flex: none;
@@ -468,6 +472,18 @@ nav .grid {
   flex-grow: 0;
   border-radius: 0.5rem;
   margin: 1rem auto;
+  transition: 1s;
+}
+
+.button:hover,
+.button-ligth:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: var(--button-color-2light);
+  border: var(--button-color-light) 2px solid;
+
+  color: var(--button-color-light);
+  font-weight: 700;
 }
 
 #contato {
@@ -528,6 +544,7 @@ nav .grid {
   flex: none;
   order: 2;
   flex-grow: 0;
+  border: none;
   border-radius: 0.5rem;
   margin: 0.3rem 1.2rem;
 }
