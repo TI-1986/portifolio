@@ -55,12 +55,20 @@ function activateMenuAtCurrentSection() {
 
 /**validar form**/
 
-function validarDados() {
-  var nome = document.getElementById(input)
+function validarDados(input) {
+  const inputType = input.dataset.type
 
-  if (nome.value == '') {
-    alert('Nome não inforrmado')
-    nome.focus()
+  if (validators[inputType]) {
+    validators[inputType](input)
+  }
+
+  if (input.validity.valid) {
+    input.parentElement.classList.remove('contatoForm--invalido')
+    input.parentElement.querySelector('.input-error-message').innerHtml = ''
+  } else {
+    input.parentElement.classList.add('contatoForm--invalido')
+    input.parentElement.querySelector('input-error-message').innerHtml =
+      showErrorMessage(inputType, input)
   }
 }
 /**enviar form**/

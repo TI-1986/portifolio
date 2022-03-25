@@ -40,7 +40,7 @@
           <div class="principal">
             <h1 class="title">
               Olá, meu nome é Tiago de<br />
-              Oliveira, construo páginas web!
+              Oliveira, sou Desenvolvedor web!
             </h1>
             <p>
               Eu sou formado em Analise e Desenvolvimento de Sistemas<br />
@@ -88,17 +88,14 @@
           <h2>Sobre mim</h2>
           <p>
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
-            obcaecati sequi voluptates earum alias fugiat aliquam libero culpa
-            in quas, quaerat consectetur possimus corporis molestiae! Adipisci
-            eius unde possimus.
+            Sempre fui apaixonado por tecnologia, eu me formei em Analise e Desenvolvimento Sistemas
+             mas  não tive a oportunidade de ingressar na area, apesar de ter pausado este sonho agora estou
+              tendo a oportunidade de retoma-lo. Agora graças ao Programa Oracle Next One posso me reciclar, 
+              renovar meus conhecimentos e aprender cada vez mais evoluindo sempre. 
           </p>
           <br />
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            reiciendis quam quidem aut nulla mollitia tenetur corporis minus
-            repudiandae eaque accusamus, magni omnis beatae animi, incidunt
-            harum dolorem delectus aliquid!
+            Sou de Colatina-Es 
           </p>
           <img src="./assets/ass.png" alt="" />
         </div>
@@ -197,20 +194,20 @@
             <a href="https://ti-1986.github.io/CriptoOne/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
         </div>
         <div class="projeto-title forca">
-          <h5 class="description">Jogo criado com HTML, CSS e JavaScript</h5>
+          <h5 class="description">Jogo da Forca</h5>
           <p class="description">Challenge Alura+Oracle </p>
-          <a href="" class="button-ligth" target="blank"><i class="icon-github1"></i>Repositorio
+          <a href="https://github.com/TI-1986/Jogo-da-Forca" class="button-ligth" target="blank"><i class="icon-github1"></i>Repositorio
             </a>
-            <a href="" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
+            <a href="https://ti-1986.github.io/Jogo-da-Forca/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
 
         </div>
 
         <div class="projeto-title atelie">
           <h5 class="description">Site Atelie de costura</h5>
           <p class="description">Projeto pessoal - site da minha esposa!</p>
-            <a href="" class="button-ligth button" target="blank"><i class="icon-github1"></i>Repositorio
+            <a href="https://github.com/TI-1986/Atelier-KF" class="button-ligth button" target="blank"><i class="icon-github1"></i>Repositorio
             </a>
-          <a href="" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
+          <a href="https://ti-1986.github.io/Atelier-KF/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
 
         </div>
         
@@ -231,22 +228,22 @@
           </p>
 
           <form
-          id="contatoForm" method="post"
+          id="contatoForm"action="mailto:ti.1986@hotmail.com" method="GET"
           name="contatoForm"
          >
             
-          <input type="text" id="nome" placeholder="Nome" />
+          <input type="text" id="nome" placeholder="Nome" required />
 
-          <input type="email" id="email" placeholder="E-mail" />
+          <input type="email" id="email" placeholder="E-mail" required minlength="4" maxlength="30" size="10" pattern="^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$" data-type="emailAddress" style="resize: none;" /><span class="input-error-message"></span>
 
-          <input type="text" id="assunto" placeholder="Assunto" />
+          <input type="text" id="assunto" placeholder="Assunto" required />
 
           <textarea
             name="mensagem"
             id="msg"
             cols="60"
             rows="10"
-            placeholder="Mensagem"
+            placeholder="Mensagem" required
           ></textarea>
 
           <button class="button" type="submit" id="submit">Enviar mensagem</button>
@@ -258,8 +255,22 @@
 
     
 
-    <footer>
-      <p>©2022 por Tiago de Oliveira</p>
+    <footer >
+      <div class="social grid">
+        <a
+          href="https://www.linkedin.com/in/tiago-de-oliveira-59648b172/"
+          target="_blank"
+        >
+          <i class="icon-linkedin"></i>
+        </a>
+        <a href="https://github.com/TI-1986" target="_blank"
+          ><i class="icon-github1"></i>
+        </a>
+      </div>
+      <div class="brand">
+        <p>©2021 por Tiago de Oliveira</p>
+        <p class="logo">Challenge - Oracle + Alura</p>
+      </div>
     </footer>
     <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
     <!-- main.js -->
