@@ -509,6 +509,7 @@ nav .grid {
   transition: 1s;
 }
 
+button.btn:hover,
 .button:hover,
 .button-ligth:hover {
   transform: translateY(-3px);
@@ -753,9 +754,10 @@ input:focus {
 footer {
   position: absolute;
   display: flex;
+  text-align: center;
   justify-content: center;
   background: var(--body-color);
-  margin-top: 270rem;
+  margin-top: 275rem;
   width: 100%;
   max-width: 1336;
   height: 10rem;
@@ -767,7 +769,7 @@ footer {
 
 footer .brand p {
   font-family: var(--title-font);
-  font-size: 1.1rem;
+  font-size: var(--paragrafo-font-size);
   color: var(--texto-color);
   margin-bottom: 0.75rem;
   line-height: 0.5rem;
@@ -783,7 +785,7 @@ footer .social {
   grid-auto-flow: column;
   width: auto;
   height: 1rem;
-  margin: 2.5rem 4rem 1rem 5rem;
+  margin: 4rem 4rem 1rem 5rem;
 }
 
 footer .social a {
