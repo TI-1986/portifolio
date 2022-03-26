@@ -315,7 +315,13 @@ nav .grid {
   position: absolute;
   display: flex;
 
-  margin: 0.1rem 20rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-30%, -5%);
+}
+
+.big-cards:hover {
+  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
 }
 
 .big-cards img {
@@ -341,7 +347,9 @@ nav .grid {
 .title1 {
   width: 15rem;
   position: absolute;
-  margin: 19rem 46rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(15%, 500%);
 }
 
 .title1 h4,
@@ -357,7 +365,9 @@ nav .grid {
 
 .title2 {
   position: absolute;
-  margin: 19rem 21rem;
+  left: 31%;
+  right: 50%;
+  transform: translate(-50%, 500%);
 }
 
 #projetos {
@@ -366,7 +376,7 @@ nav .grid {
   justify-content: center;
   width: 100%;
   max-width: 1336px;
-
+  height: auto;
   left: 50%;
   right: 50%;
   transform: translate(-45%, -50%);
@@ -396,19 +406,30 @@ nav .grid {
   box-shadow: 0 8px 32px 0 rgb(190, 218, 255);
 }
 
+.projeto-title.atelie {
+  width: 20rem;
+  height: 22rem;
+  margin-top: 4rem;
+}
+
+.projeto-title.forca {
+  width: 20rem;
+  height: 20rem;
+}
+.projeto-title.cripto {
+  width: 20rem;
+  height: 19.5rem;
+}
+
 .projeto-title {
   position: relative;
   display: block;
-  width: 20rem;
-  height: 18rem;
+
   justify-items: center;
   align-items: center;
   text-align: center;
-
-  margin: 5rem 0;
+  margin: 3rem 0;
   padding-top: 1.5rem;
-  visibility: visible;
-
   left: 50%;
   right: 50%;
   transform: translate(35%, -50%);
@@ -507,7 +528,7 @@ nav .grid {
   padding: 1rem;
   width: 100%;
   max-width: 1336px;
-  height: 42rem;
+  height: 50rem;
   margin: 218rem 0rem;
 
   background: var(--base-color-second);
@@ -519,8 +540,8 @@ nav .grid {
 #contato .img-form {
   display: flex;
   align-items: center;
-  width: 30rem;
-  height: 38rem;
+  width: 35rem;
+  height: 40rem;
 }
 
 #contato .info {
@@ -564,10 +585,44 @@ nav .grid {
 
 input,
 textarea {
-  padding-left: 1rem;
+  padding: 1rem 0.5rem;
   font-weight: 500;
   font-family: var(--title-font);
   font-size: var(--paragrafo-font-size);
+  color: var(--texto-color);
+}
+
+.form-control {
+  margin-bottom: 0.6rem;
+  padding-bottom: 1.2rem;
+  position: relative;
+}
+
+.form-control input {
+  border: none;
+  display: block;
+  border-radius: 0.6rem;
+  background: var(--back-cards);
+
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.form-control i {
+  position: absolute;
+  top: 7.5rem;
+  right: 0.6rem;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0.5rem 1rem;
+  visibility: hidden;
+
+  font-family: var(--title-font);
   color: var(--texto-color);
 }
 
@@ -594,15 +649,29 @@ input:hover::placeholder {
 
 form textarea {
   position: static;
-  width: 41rem;
+  width: 100%;
   height: 8rem;
   left: calc(50% - 41rem / 2);
 
   background: var(--back-cards);
-  border-radius: 0.25rem;
+  font-family: var(--title-font);
+  color: var(--texto-color);
+
+  border-radius: 0.65rem;
   margin: 0.5rem 1rem;
   resize: none;
   border: none;
+}
+
+form input {
+  position: static;
+  width: 41rem;
+  height: 3.5rem;
+
+  border-radius: 0.25rem;
+  border: none;
+  border-style: none;
+  margin: 0.5rem 1rem;
 }
 
 textarea:focus,
@@ -612,16 +681,42 @@ input:focus {
   outline: 0;
 }
 
-form input {
-  position: static;
-  width: 41rem;
-  height: 3.5rem;
+/* Error and Success */
+.form-control.success input {
+  border: 0.12rem solid;
+  border-color: var(--button-color);
+}
+.form-control.success textarea {
+  border: 0.12rem solid;
+  border-color: var(--button-color);
+}
 
-  background: var(--back-cards);
-  border-radius: 0.25rem;
-  border: none;
-  border-style: none;
-  margin: 0.5rem 1rem;
+.form-control.error input {
+  border: 0.12rem solid;
+  border-color: #e74c3c;
+}
+
+.form-control.error textarea {
+  border: 0.12rem solid;
+  border-color: #e74c3c;
+}
+.form-control i.fas {
+  margin: -6.5rem -1rem;
+}
+
+.form-control.success i.icon-fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.icon-fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
 }
 
 /* Back to top */

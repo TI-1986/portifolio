@@ -25,6 +25,12 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'point-right': '&#xea04;',
+            'finger2': '&#xea04;',
+            'notification': '&#xea08;',
+            'warning2': '&#xea08;',
+            'checkmark': '&#xea10;',
+            'tick': '&#xea10;',
             'arrow-up2': '&#xea3a;',
             'up2': '&#xea3a;',
           '0': 0

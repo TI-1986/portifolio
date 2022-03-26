@@ -186,20 +186,20 @@
           <img src="./assets/atelie-image.svg " alt="ilustração do site de costura criativa">  </img>
          
         </div>
-        <div class="projeto-title cripto">
+        <div id="projeto-title" class="projeto-title cripto">
           <h5 class="description">Decodificador de texto</h5>
           <p class="description">Challenge Alura
             Codificador</p>
             <a href="https://github.com/TI-1986/CriptoOne" target="blank" class="button-ligth"><i class="icon-github1"></i>Repositorio
             </a>
-            <a href="https://ti-1986.github.io/CriptoOne/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
+            <a href="https://ti-1986.github.io/CriptoOne/" class="button" target="blank"><i class="icon-point-right"></i>Ver demo</a>
         </div>
         <div class="projeto-title forca">
           <h5 class="description">Jogo da Forca</h5>
           <p class="description">Challenge Alura+Oracle </p>
           <a href="https://github.com/TI-1986/Jogo-da-Forca" class="button-ligth" target="blank"><i class="icon-github1"></i>Repositorio
             </a>
-            <a href="https://ti-1986.github.io/Jogo-da-Forca/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
+            <a href="https://ti-1986.github.io/Jogo-da-Forca/" class="button" target="blank"><i class="icon-point-right"></i>Ver demo</a>
 
         </div>
 
@@ -208,7 +208,7 @@
           <p class="description">Projeto pessoal - site da minha esposa!</p>
             <a href="https://github.com/TI-1986/Atelier-KF" class="button-ligth button" target="blank"><i class="icon-github1"></i>Repositorio
             </a>
-          <a href="https://ti-1986.github.io/Atelier-KF/" class="button" target="blank"><i class="icon-git"></i>Ver demo</a>
+          <a href="https://ti-1986.github.io/Atelier-KF/" class="button" target="blank"><i class="icon-point-right"></i>Ver demo</a>
 
         </div>
         
@@ -228,28 +228,54 @@
             possivel.
           </p>
 
-          <form
-          id="contatoForm"action="mailto:ti.1986@hotmail.com" method="GET"
-          name="contatoForm"
-         >
-            
-          <input type="text" id="nome" placeholder="Nome" required />
-
-          <input type="email" id="email" placeholder="E-mail" required minlength="4" maxlength="30" size="10" pattern="^(?:(?:[\w\.\-_]+@[\w\d]+(?:\.[\w]{2,6})+)[,;]?\s?)+$" data-type="emailAddress" style="resize: none;" /><span class="input-error-message"></span>
-
-          <input type="text" id="assunto" placeholder="Assunto" required />
-
-          <textarea
-            name="mensagem"
-            id="msg"
-            cols="60"
-            rows="10"
-            placeholder="Mensagem" required
-          ></textarea>
-
-          <button class="button" type="submit" id="submit">Enviar mensagem</button>
-        </form>
-      </div>
+          <form id="form" class="form">
+            <div class="form-control">
+              
+              <input
+                type="text"
+                id="username"
+                placeholder="Digite seu nome"
+              /> <i class="fas icon-fa-exclamation-circle"></i>
+              <i class="fas icon-fa-check-circle"></i>
+              <small>Mensagem de erro</small>
+            </div>
+    
+            <div class="form-control">
+              
+              <input type="email" id="email" placeholder="E-mail" />
+              <i class="fas icon-fa-exclamation-circle"></i>
+              <i class="fas icon-fa-check-circle"></i>
+              <small>Mensagem de erro</small>
+            </div>
+    
+            <div class="form-control">
+              
+              <input
+                type="text"
+                id="assunto"
+                placeholder="Assunto"
+              />
+              <i class="fas icon-fa-exclamation-circle"></i>
+              <i class="fas icon-fa-check-circle"></i>
+              <small>Mensagem de erro</small>
+            </div>
+    
+            <div class="form-control">
+             
+              <textarea cols="30" rows="4"          
+                id="mensagem"
+                placeholder="Digite sua mensagem"
+              ></textarea>
+              <i class="fas icon-fa-exclamation-circle"></i>
+              <i class="fas icon-fa-check-circle"></i>
+             
+              <small>Mensagem de erro</small>
+            </div>
+    
+            <button type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+          </div>
       </section>
       
     </main>
