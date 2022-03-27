@@ -71,7 +71,7 @@ function checkInputs() {
   const mensagemValue = mensagem.value
 
   if (usernameValue === '') {
-    setErrorFor(username, 'O nome de usuário é obrigatório.')
+    setErrorFor(username, 'O nome é obrigatório.')
   } else {
     setSuccessFor(username)
   }
@@ -85,7 +85,7 @@ function checkInputs() {
   }
 
   if (assuntoValue === '') {
-    setErrorFor(assunto, 'O nome de usuário é obrigatório.')
+    setErrorFor(assunto, 'O assunto é obrigatório.')
   } else {
     setSuccessFor(assunto)
   }
