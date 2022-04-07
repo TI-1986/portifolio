@@ -112,7 +112,7 @@ nav .grid {
 
 /* toggle menu */
 .toggle {
-  color: var(--base-color);
+  color: var(--button-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -132,6 +132,10 @@ nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
+}
+
+nav .icon-menu {
+  display: none;
 }
 
 #home {
@@ -279,7 +283,7 @@ nav.show div.icon-close {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 2rem 5rem;
+  margin: 2rem -1rem;
 }
 
 .card {
@@ -344,10 +348,6 @@ nav.show div.icon-close {
   transform: translate(-30%, -5%);
 }
 
-.big-cards:hover {
-  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
-}
-
 .big-cards img {
   width: 10rem;
   height: 10rem;
@@ -366,6 +366,10 @@ nav.show div.icon-close {
   position: static;
   width: 23rem;
   height: 18rem;
+}
+
+.big-card:hover {
+  filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
 }
 
 .title1 {
@@ -824,7 +828,7 @@ footer .social a:hover {
 
 /**media queries**/
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #header {
     display: flex;
     flex-direction: row;
@@ -839,31 +843,20 @@ footer .social a:hover {
     left: 0px;
     top: 0px;
   }
-
-  nav #menu {
-    opacity: 1;
-    visibility: visible;
-    top: 0;
+  .logo {
+    width: 100%;
   }
 
-  nav #menu ul {
+  .name {
     display: flex;
-    gap: 2rem;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 5rem;
+    font-size: 0.9rem;
   }
 
-  nav #menu ul li a.menu {
-    font: 400 1rem var(--body-font);
-    -webkit-font-smoothing: antialiased;
-  }
 
-  nav #menu ul li a.menu.active {
-    font-weight: bold;
-    -webkit-font-smoothing: auto;
-  }
-
-  nav .icon-menu {
-    display: none;
-  }
 
   #home {
     display: block;
@@ -885,7 +878,7 @@ footer .social a:hover {
     left: 0px;
     top: 0px;
 
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
 
     flex: none;
@@ -901,10 +894,10 @@ footer .social a:hover {
     width: 328px;
     height: 48px;
     left: 0px;
-    top: 60px;
+    top: 2.2rem;
 
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 1rem;
+    line-height: 1rem;
     font-weight: 500;
 
     flex: none;
@@ -936,7 +929,6 @@ footer .social a:hover {
 
   #link i {
     display: none;
-    margin: -1.1rem -1.8rem;
   }
 
   .profile {
@@ -953,8 +945,8 @@ footer .social a:hover {
   }
 
   .link {
-    padding: 0.1rem;
-    font-size: 0.8rem;
+    padding: 0.09rem;
+    font-size: 0.7rem;
     font-weight: 500;
   }
 
@@ -966,7 +958,7 @@ footer .social a:hover {
 
     position: absolute;
     width: 120%;
-    height: 20rem;
+    height: 22rem;
     left: 0px;
     top: 10rem;
 
@@ -1004,7 +996,129 @@ footer .social a:hover {
 
   #sobre img {
     width: 10rem;
-    height: 6rem;
-    margin: 15rem 0rem 0rem -20rem;
+    height: 6.5rem;
+    margin: 16rem 0rem 0rem -20rem;
   }
+
+  #skills {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    left: 0px;
+    top: 50rem;
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+  }
+  
+
+  #hobbies {
+    flex-direction: column;
+     position: absolute;
+    width: 100%;
+    height: 20rem;
+    left: 0px;
+    top: 85rem;
+    
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+  }
+
+  #hobbies .cards {
+    display: grid;
+    }
+ 
+    .cards {
+      position: absolute;
+      display: grid;
+      width: 100%;
+      margin: 1rem auto;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 0.1fr));
+      }
+  
+  .card {
+     width: 7rem;
+     height: 8rem;
+     padding: 4rem;
+     padding-block: 3rem;
+     border-radius: 4%;
+     display: block;
+      
+      background: var(--back-cards);
+      transition: 0.5s;
+      
+    }
+  
+    .card:hover {
+      filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+      transform: scale(1.1);
+    }
+    
+    .card img {
+      width: 1rem;
+      height: 1rem;
+      margin: 2rem -3.5rem 0rem;
+    }
+    
+    .card p {
+      margin: 0.2rem -3.5rem;
+      position: absolute;
+      font-size: .7rem;
+    }
+
+  #formacao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  left: 0px;
+  top: 125rem;
+
+  background: var(--base-color-second);
+  flex: none;
+  order: 5;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+  }
+
+  .big-cards{
+display: block;
+gap:24rem;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 20rem;
+height: 30rem;
+left: 0;
+top: 90px;
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 32px 0px;
+  }
+
+  #projetos{
+  position: absolute;
+  width: 360px;
+  height: 661px;
+  left: 0px;
+  top: 145rem;
+
+}
 }

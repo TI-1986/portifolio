@@ -25,6 +25,10 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'display': '&#xe956;',
+            'screen': '&#xe956;',
+            'user-tie': '&#xe976;',
+            'user5': '&#xe976;',
             'point-right': '&#xea04;',
             'finger2': '&#xea04;',
             'notification': '&#xea08;',

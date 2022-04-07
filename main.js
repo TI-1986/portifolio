@@ -17,17 +17,6 @@ for (const link of links) {
   })
 }
 
-/* Botão voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top')
-
-function backToTop() {
-  if (window.scrollY >= 60) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
-}
-
 /* Menu ativo conforme a seção visível na página */
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
@@ -54,6 +43,8 @@ function activateMenuAtCurrentSection() {
 }
 
 //validando form
+//
+//
 const form = document.getElementById('form')
 const username = document.getElementById('username')
 const email = document.getElementById('email')
@@ -129,4 +120,15 @@ function checkEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   )
+}
+
+/* Botão voltar para o topo */
+const backToTopButton = document.querySelector('.back-to-top')
+
+function backToTop() {
+  if (window.scrollY >= 60) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
 }
