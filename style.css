@@ -1135,9 +1135,85 @@ margin: 2rem 30%;
   #projetos{
   position: absolute;
   width: 100%;
-  height: 20rem;
+  height: 50rem;
   left: 0px;
-  top: 10rem;
+  top: 200rem;
+
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px 50%;
 
 }
+
+#projetos h3{
+  font-size: 1.6rem;
+  }
+
+  #projetos img{
+ 
+    width: 18.5rem;
+    height: 9rem;
+    left: 0rem;
+    top: 0rem;
+
+   border-radius: 1em;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 1rem 0rem;
+  }
+  .projeto-img{
+    position: absolute;
+    display: grid;
+    margin: 1rem 27rem;
+  }
+
+  .projeto-img:hover{
+    cursor:pointer;
+  }
+
+  .projeto-title.cripto,
+  .projeto-title.forca,
+  .projeto-title.atelie{
+    position: relative;
+    width: 19rem;
+    height: 10rem;
+    top: -5rem;
+    margin: 2rem -16rem;
+    opacity: 0%;
+    
+  }
+
+  .projeto-title.cripto:hover,
+  .projeto-title.forca:hover,
+  .projeto-title.atelie:hover{
+    opacity: unset;
+  }
+
+  .projeto-title.atelie{
+    top: -6rem;
+  }
+
+  .projeto-title h5,
+  .projeto-title p,
+  .projeto-title a{
+    font-size: .5rem;
+  }
+  .button,
+  .button-ligth{
+    width: 8rem;
+    height: 2rem;
+    margin: .5rem auto;
+
+  }
+
+
+  #contato{
+    position: absolute;
+    top:150rem;
+  }
 }
