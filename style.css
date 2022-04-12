@@ -58,13 +58,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--body-color);
+  background: var(--body-color-second);
 
   box-sizing: border-box;
   width: 100%;
   max-width: 1920px;
   height: 3rem;
-  padding: 2rem;
+  padding: 2.5rem;
   gap: 1.5rem;
   margin: 0rem 6rem;
 }
@@ -82,8 +82,7 @@ nav .grid {
 .logo i {
   width: 2.5em;
   height: 2.5rem;
-}
-
+ }
 .menu,
 .contato,
 .name {
@@ -112,7 +111,8 @@ nav .grid {
 
 /* toggle menu */
 .toggle {
-  color: var(--button-color);
+  display: none;
+  color: var(--base-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -132,10 +132,6 @@ nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
-}
-
-nav .icon-menu {
-  display: none;
 }
 
 #home {
@@ -261,7 +257,7 @@ nav .icon-menu {
   width: 100%;
   max-width: 1920px;
   height: 20rem;
-  margin: 55rem 5rem;
+  margin: 55rem auto;
   align-items: center;
 }
 
@@ -270,7 +266,7 @@ nav .icon-menu {
   width: 100%;
   max-width: 1920px;
   height: 20rem;
-  margin: 75rem 5rem;
+  margin: 75rem auto;
   align-items: center;
 }
 
@@ -323,7 +319,7 @@ nav .icon-menu {
   width: 100%;
   max-width: 1920px;
   height: 35rem;
-  margin: 100rem 0rem;
+  margin: 100rem auto;
 
   background: var(--base-color-second);
   font-family: var(--title-font);
@@ -408,7 +404,7 @@ nav .icon-menu {
   left: 50%;
   right: 50%;
   transform: translate(-45%, -50%);
-  margin: 175rem 0;
+  margin: 175rem auto;
 }
 
 #projetos h3 {
@@ -558,7 +554,7 @@ button.btn:hover,
   width: 100%;
   max-width: 1920px;
   height: 50rem;
-  margin: 218rem 0rem;
+  margin: 218rem auto;
 
   background: var(--base-color-second);
 
@@ -828,7 +824,7 @@ footer .social a:hover {
 }
 
 /**media queries**/
-@media screen and (max-width:1336px){
+@media only screen and (min-width: 901px) and (max-width:1336px){
   #header {
     position: absolute;
     display: flex;
@@ -1038,7 +1034,7 @@ footer .social a:hover {
     width: 100%;
     max-width: 1336px;
     height: 20rem;
-    margin: 55rem 5rem;
+    margin: 55rem auto;
     align-items: center;
   }
   
@@ -1047,7 +1043,7 @@ footer .social a:hover {
     width: 100%;
     max-width: 1336px;
     height: 20rem;
-    margin: 75rem 5rem;
+    margin: 75rem auto;
     align-items: center;
   }
   
@@ -1487,8 +1483,6 @@ footer .social a:hover {
     outline: 0;
   }
   
-  
-  
   footer {
     position: absolute;
     display: flex;
@@ -1537,7 +1531,7 @@ footer .social a:hover {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 480px){
+@media only screen and (min-width: 345px)  and (max-width: 767px) {
   #header {
     display: flex;
     flex-direction: row;
@@ -1564,7 +1558,6 @@ footer .social a:hover {
     margin-right: 5rem;
     font-size: 0.9rem;
   }
-
 
 
   #home {
@@ -1817,18 +1810,18 @@ footer .social a:hover {
   }
 
 .title1{
-    margin: 4rem -15rem;
+    margin: 5rem -52%;
 }
 
 .title2{
   width: 100%;
-  margin: 30rem 8rem;
+  margin: 31rem auto;
 }
 
 
 
 
-  .big-cards{
+.big-cards{
 display: grid;
 gap: 8rem;
 flex-direction: column;
@@ -1845,7 +1838,7 @@ flex: none;
 order: 1;
 align-self: stretch;
 flex-grow: 0;
-margin: 2rem 31%;
+margin: 2rem 26%;
   }
 
   #projetos{
@@ -1931,7 +1924,7 @@ margin: 0px 50%;
 #contato{
 position: absolute;
 width: 100%;
-height: 50rem;
+height: 40rem;
 left: 0%;
 top: 230rem;
 padding: 1rem;
@@ -2002,9 +1995,9 @@ margin: 0rem 0rem;
   footer{
     position: absolute;
     width: 100%;
-    height: 30rem;
+    height: 10rem;
     left: 0px;
-    top: 290rem;
+    top: 278rem;
     padding: 1rem;
     
     flex: none;
@@ -2016,7 +2009,8 @@ margin: 0rem 0rem;
 
 
 }
-@media only screen and (min-width: 481px) and (max-width: 768px){
+
+@media only screen and (min-width: 768px) and (max-width: 900px){
   #header {
     display: flex;
     flex-direction: row;
@@ -2035,14 +2029,30 @@ margin: 0rem 0rem;
     width: 100%;
   }
 
-  .name {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-right: 5rem;
-    font-size: 0.9rem;
-  }
+ .name {
+display: flex;
+ text-align: center;
+justify-content: space-between;
+width: 100%;
+margin-right: 5rem;
+font-size: 0.9rem;
+}
+  
+
+#link{
+ display: flex;
+ width: 100%;
+ }
+   
+.link {
+padding: 1rem;
+font-weight: 500;
+font-size: 1rem;
+ font-weight: 500;
+ margin: -3rem 1rem;
+ width: 10rem;
+ height: 3rem;
+ }
 
   #home {
     display: block;
@@ -2064,14 +2074,14 @@ margin: 0rem 0rem;
     left: 0px;
     top: 0px;
 
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 2rem;
 
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-    margin: -1.5rem 0px;
+    margin: -1.2rem 0px;
   }
 
   #home p {
@@ -2080,9 +2090,9 @@ margin: 0rem 0rem;
     width: 100%;
     height: 4rem;
     left: 0px;
-    top: 2.5rem;
+    top: 2.2rem;
 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2rem;
     font-weight: 500;
 
@@ -2131,21 +2141,16 @@ margin: 0rem 0rem;
     margin: -7rem 1rem;
   }
 
-  .link {
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-  }
 
   #sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding: 5rem;
 
     position: absolute;
     width: 120%;
-    height: 22rem;
+    height: 30rem;
     left: 0px;
     top: 10rem;
 
@@ -2167,12 +2172,12 @@ margin: 0rem 0rem;
   #sobre p {
     position: absolute;
     display: block;
-    width: 328px;
+    width: 40rem;
     height: 26rem;
     left: 0px;
     top: 0rem;
 
-    font-size: 14px;
+    font-size: 1.2rem;
 
     flex: none;
     order: 1;
@@ -2182,9 +2187,9 @@ margin: 0rem 0rem;
   }
 
   #sobre img {
-    width: 10rem;
-    height: 6.5rem;
-    margin: 16rem 0rem 0rem -20rem;
+    width: 12rem;
+    height: 7rem;
+    margin: 18rem 0rem 0rem -45rem;
   }
 
   #skills {
@@ -2193,7 +2198,7 @@ margin: 0rem 0rem;
     width: 100%;
     height: 10rem;
     left: 0px;
-    top: 50rem;
+    top: 58rem;
 
     flex: none;
     order: 3;
@@ -2203,7 +2208,7 @@ margin: 0rem 0rem;
   }
   
   #skills h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   #hobbies {
@@ -2222,7 +2227,7 @@ margin: 0rem 0rem;
   }
 
   #hobbies h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   #hobbies .cards {
@@ -2238,7 +2243,7 @@ margin: 0rem 0rem;
       }
   
   .card {
-     width: 7rem;
+     width: 9rem;
      height: 8rem;
      padding: 4rem;
      padding-block: 3rem;
@@ -2274,10 +2279,10 @@ margin: 0rem 0rem;
   padding: 2rem;
 
   position: absolute;
-  width: 120%;
+  width: 100%;
   height: 60rem;
   left: 0px;
-  top: 125rem;
+  top: 118rem;
 
   background: var(--base-color-second);
   flex: none;
@@ -2289,24 +2294,25 @@ margin: 0rem 0rem;
 
   #formacao h3{
     display: flex;
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding: 1rem;
-    margin-left: -4rem ;
+    margin-left: -3rem ;
   }
 
 .title1{
-    margin: 4rem -15rem;
+    margin: 5rem -24%;
 }
 
 .title2{
+  justify-content: center;
   width: 100%;
-  margin: 30rem 8rem;
+  margin: 31rem 25%;
 }
 
 
 
 
-  .big-cards{
+ .big-cards{
 display: grid;
 gap: 8rem;
 flex-direction: column;
@@ -2323,15 +2329,15 @@ flex: none;
 order: 1;
 align-self: stretch;
 flex-grow: 0;
-margin: 2rem 31%;
-  }
+margin: 2rem 54%;
+}
 
   #projetos{
   position: absolute;
   width: 100%;
   height: 50rem;
   left: 0px;
-  top: 200rem;
+  top: 198rem;
 
 flex: none;
 order: 6;
@@ -2342,14 +2348,14 @@ margin: 0px 50%;
 }
 
 #projetos h3{
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-left: -2rem;
   }
 
   #projetos img{
  
-    width: 18rem;
-    height: 9rem;
+    width: 30rem;
+    height: 15rem;
     left: 0rem;
     top: 0rem;
 
@@ -2359,12 +2365,12 @@ margin: 0px 50%;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-    margin: 1rem 0rem;
+    margin: 1rem auto;
   }
   .projeto-img{
     position: absolute;
     display: grid;
-    margin: 1rem 26rem;
+    margin: 1rem 15rem;
   }
 
   .projeto-img:hover{
@@ -2375,10 +2381,10 @@ margin: 0px 50%;
   .projeto-title.forca,
   .projeto-title.atelie{
     position: relative;
-    width: 19rem;
-    height: 10rem;
-    top: -5rem;
-    margin: 2rem -17rem;
+    width: 30rem;
+    height: 16rem;
+    top: -1.9rem;
+    margin: 1.7rem -26.5rem;
     opacity: 0%;
     
   }
@@ -2390,18 +2396,18 @@ margin: 0px 50%;
   }
 
   .projeto-title.atelie{
-    top: -6rem;
+    top: -3rem;
   }
 
   .projeto-title h5,
   .projeto-title p,
   .projeto-title a{
-    font-size: .5rem;
+    font-size: 1rem;
   }
   .button,
   .button-ligth{
-    width: 8rem;
-    height: 2rem;
+    width: 10rem;
+    height: 3rem;
     margin: .5rem auto;
 
   }
@@ -2409,9 +2415,9 @@ margin: 0px 50%;
 #contato{
 position: absolute;
 width: 100%;
-height: 50rem;
+height: 40rem;
 left: 0%;
-top: 230rem;
+top: 250rem;
 padding: 1rem;
 
 flex: none;
@@ -2442,12 +2448,12 @@ margin: 0rem 0rem;
 
     
   #form input::placeholder{
-    font-size: .6rem;
+    font-size: 1rem;
     margin: -1% 0%;
   }
 
   #form textarea::placeholder{
-    font-size: .6rem;
+    font-size: 1rem;
     margin: -3% 0%;
   }
 
@@ -2461,28 +2467,28 @@ margin: 0rem 0rem;
   #contato .info h3{
     display: flex;
     position: relative;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 1rem -9.5rem;
   }
 
   .info p{
-    font-size: .8rem;
+    font-size: 1rem;
     width: 100%;
     margin: 0rem -9.5rem;
   }
   .info button{
-    width: 10rem;
-    height: 3rem;
+    width: 15rem;
+    height: 4rem;
     margin: .5rem auto;
-    font-size: .7rem;
+    font-size: 1rem;
   }
 
   footer{
     position: absolute;
     width: 100%;
-    height: 30rem;
+    height: 10rem;
     left: 0px;
-    top: 290rem;
+    top: 298rem;
     padding: 1rem;
     
     flex: none;
