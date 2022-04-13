@@ -66,7 +66,12 @@ body {
   height: 3rem;
   padding: 2.5rem;
   gap: 1.5rem;
-  margin: 0rem 6rem;
+  margin: 0rem 5rem;
+}
+
+.menu{
+  display: block;
+  padding: .5rem;
 }
 
 nav .grid {
@@ -79,10 +84,13 @@ nav .grid {
   margin: 7rem;
 }
 
-.logo i {
-  width: 2.5em;
-  height: 2.5rem;
+.name i {
+  width: 1.2em;
+  height: 1.2rem;
+  padding-left: .5rem;
+  color:var(--button-color);
  }
+
 .menu,
 .contato,
 .name {
@@ -94,44 +102,25 @@ nav .grid {
 
 .menu:hover,
 .contato:hover,
-.name:hover,
-.logo:hover {
+.name:hover{
   filter: drop-shadow(0px 4px 4px #1e69ca);
   font-weight: 700;
   cursor: pointer;
+  color: var(--button-color);
 }
 
 .name {
   font-weight: 700;
-}
+  }
 
 .contato {
   font-weight: 700;
 }
 
 /* toggle menu */
-.toggle {
-  display: none;
-  color: var(--base-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-nav .icon-close {
-  visibility: hidden;
-  opacity: 0;
-
-  position: absolute;
-  top: -1.5rem;
-  right: 1.5rem;
-
-  transition: 0.2s;
-}
-
-nav.show div.icon-close {
-  visibility: visible;
-  opacity: 1;
-  top: 1.5rem;
+#btnMenu {
+  position:fixed;
+ display: none;
 }
 
 #home {
@@ -1537,7 +1526,7 @@ footer .social a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 1rem;
 
     position: fixed;
     width: 100%;
@@ -1546,8 +1535,11 @@ footer .social a:hover {
     left: 0px;
     top: 0px;
   }
-  .logo {
-    width: 100%;
+ #logo {
+    display: flex;
+    width: 14rem;
+    align-items: center;
+    
   }
 
   .name {
@@ -1558,7 +1550,16 @@ footer .social a:hover {
     margin-right: 5rem;
     font-size: 0.9rem;
   }
+  
+  #menu{
+    display: none;
+  }
 
+  #btnMenu{
+    position: fixed;
+    display:block;
+    margin:  -.9rem -22rem;
+  }
 
   #home {
     display: block;
@@ -1754,7 +1755,7 @@ footer .social a:hover {
   
   .card {
      width: 7rem;
-     height: 8rem;
+     height: 8.5rem;
      padding: 4rem;
      padding-block: 3rem;
      border-radius: 4%;
@@ -1777,7 +1778,7 @@ footer .social a:hover {
     }
     
     .card p {
-      margin: 0.2rem -3.5rem;
+      margin: 0.1rem -3.5rem;
       position: absolute;
       font-size: .7rem;
     }
@@ -1810,12 +1811,12 @@ footer .social a:hover {
   }
 
 .title1{
-    margin: 5rem -52%;
+    margin: 6rem -52%;
 }
 
 .title2{
   width: 100%;
-  margin: 31rem auto;
+  margin: 32rem auto;
 }
 
 
@@ -2017,7 +2018,8 @@ margin: 0rem 0rem;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-
+    
+  
     position: fixed;
     width: 100%;
     height: 5rem;
@@ -2025,6 +2027,7 @@ margin: 0rem 0rem;
     left: 0px;
     top: 0px;
   }
+
   .logo {
     width: 100%;
   }
