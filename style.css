@@ -119,8 +119,7 @@ nav .grid {
 
 /* toggle menu */
 #btnMenu {
-  position:fixed;
- display: none;
+   display: none;
 }
 
 #home {
@@ -813,7 +812,7 @@ footer .social a:hover {
 }
 
 /**media queries**/
-@media only screen and (min-width: 901px) and (max-width:1336px){
+@media only screen and (max-width:1360px){
   #header {
     position: absolute;
     display: flex;
@@ -1520,21 +1519,22 @@ footer .social a:hover {
   }
 }
 
-@media only screen and (min-width: 345px)  and (max-width: 767px) {
+@media only screen and (max-width: 510px) {
   #header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-
-    position: fixed;
-    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    width: 120%;
     height: 5rem;
     margin: auto;
     left: 0px;
     top: 0px;
   }
+
  #logo {
     display: flex;
     width: 14rem;
@@ -1551,15 +1551,87 @@ footer .social a:hover {
     font-size: 0.9rem;
   }
   
-  #menu{
-    display: none;
+  nav .grid{
+    position: absolute;
+    display: block;
+
+    visibility: hidden;
+    overflow-y: hidden;
+
+    width: 100%;
+    top: -3.5rem;
+    right: -7rem;
+    background: var(--base-color-second);
+    height: 0rem;
+    transition: .6s;
+    z-index: 1000;
+  }
+
+  .grid a{
+    padding: 1rem 0;
+    margin: 0 1rem;
+   
+    border-bottom: 2px solid var(--button-color-2light);
+
+  }
+
+  .contato {
+   display: flex;
+   gap:0.5rem;    
+  }
+  #nav.active .grid{
+    
+    height: calc(100vh - 4.3rem);
+    visibility: visible;
+    overflow-y: auto;
+
   }
 
   #btnMenu{
-    position: fixed;
-    display:block;
-    margin:  -.9rem -22rem;
+    position: absolute;
+    display: flex;
+    margin:  -1.2rem auto;
+    margin-left: -25%;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+   
+    padding: .5rem 1rem;
   }
+
+  #iconMenu{
+    border-top: .12rem solid;
+    width: 1.5rem;
+    color: var(--button-color);
+   }
+
+  #iconMenu::after,
+  #iconMenu::before{
+    content: ' ';
+    display: block;
+    width: 1.5rem;
+    height: .12rem;
+    margin-top: .3rem;
+    background-color: currentColor;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #iconMenu{
+    border-top-color: transparent;
+  }  
+
+  #nav.active #iconMenu::before{
+    transform: rotate(135deg);
+  }
+
+  #nav.active #iconMenu::after{
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+
 
   #home {
     display: block;
@@ -1567,7 +1639,7 @@ footer .social a:hover {
     align-items: flex-start;
     padding: 16px;
 
-    position: absolute;
+    position: relative;
     width: 360px;
     height: 294px;
     left: 0px;
@@ -1634,17 +1706,24 @@ footer .social a:hover {
     display: none;
   }
 
+  #link img {
+    width: .5rem;
+    height: .5rem;
+    top: 11.3rem;
+  }
+
+
   .profile {
     position: absolute;
-    width: 98px;
-    height: 98px;
+    width: 90px;
+    height: 90px;
     left: 0px;
     top: 0px;
 
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: -7rem 1rem;
+    margin: -6.3rem 1rem;
   }
 
   .link {
@@ -2011,16 +2090,16 @@ margin: 0rem 0rem;
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 900px){
+@media only screen and (min-width:768px) and (max-width: 900px){
   #header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    
+    background: var(--base-color-second);
+    position: absolute;
   
-    position: fixed;
     width: 100%;
     height: 5rem;
     margin: auto;
@@ -2041,6 +2120,87 @@ margin-right: 5rem;
 font-size: 0.9rem;
 }
   
+ 
+nav .grid{
+  position: absolute;
+  display: block;
+
+  visibility: hidden;
+  overflow-y: hidden;
+
+  width: 100%;
+  top: -3.5rem;
+  right: -7rem;
+  background: var(--base-color-second);
+  height: 0rem;
+  transition: .6s;
+  z-index: 1000;
+}
+
+.grid a{
+  padding: 1rem 0;
+  margin: 0 1rem;
+ 
+  border-bottom: 2px solid var(--button-color-2light);
+
+}
+
+.contato {
+ display: flex;
+ gap:0.5rem;    
+}
+#nav.active .grid{
+  
+  height: calc(100vh - 4.3rem);
+  visibility: visible;
+  overflow-y: auto;
+
+}
+
+#btnMenu{
+  position: absolute;
+  display: flex;
+  margin:  -1.2rem auto;
+  margin-left: -25%;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+ 
+  padding: .5rem 1rem;
+}
+
+#iconMenu{
+  border-top: .12rem solid;
+  width: 1.5rem;
+  color: var(--button-color);
+ }
+
+#iconMenu::after,
+#iconMenu::before{
+  content: ' ';
+  display: block;
+  width: 1.5rem;
+  height: .12rem;
+  margin-top: .3rem;
+  background-color: currentColor;
+  transition: .3s;
+  position: relative;
+}
+
+#nav.active #iconMenu{
+  border-top-color: transparent;
+}  
+
+#nav.active #iconMenu::before{
+  transform: rotate(135deg);
+}
+
+#nav.active #iconMenu::after{
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
 
 #link{
  display: flex;

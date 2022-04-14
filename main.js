@@ -1,6 +1,12 @@
 /*  abre e fecha o menu quando clicar no icone: hamburguer e x */
 const btnMenu = document.getElementById('btnMenu')
 
+function toggleMenu() {
+  const nav = document.getElementById('nav')
+  nav.classList.toggle('active')
+}
+btnMenu.addEventListener('click', toggleMenu)
+
 //validando form
 //
 //
