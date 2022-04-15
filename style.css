@@ -742,7 +742,7 @@ margin: -6.5rem -1rem;
 }
 
 .form-control.success i.icon-fa-check-circle {
-color: #2ecc71;
+color: var(--button-color);
 visibility: visible;
 }
 
@@ -1916,11 +1916,11 @@ margin: 0px 0px;
 display: flex;
 font-size: 1.6rem;
 padding: 1rem;
-margin-left: -4rem ;
+margin-left: auto;
 }
 
 .title1{
-margin: -3rem .1rem;
+margin: -3.1rem .4rem;
 }
 
 .title2{
@@ -1945,11 +1945,11 @@ flex: none;
 order: 1;
 align-self: stretch;
 flex-grow: 0;
-margin: 2rem 30%;
+margin: 2rem 39.5%;
 }
 
 .big-card{
-width: 20rem;
+width: 18rem;
 height: 15rem;
 }
 
@@ -2436,8 +2436,8 @@ display: grid;
 .cards {
 position: absolute;
 display: grid;
-width: 100%;
-margin: 1rem auto;
+width: 70%;
+margin: 1rem 15%;
 grid-template-columns: repeat(auto-fit, minmax(8rem, 0.1fr));
 }
 
