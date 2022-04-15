@@ -21,6 +21,20 @@ height: auto;
 }
 
 /*====  VARIABLES ============================ */
+body.active :root {
+  /* colors */
+  
+  --body-color: rgb(0, 0, 0);
+  --base-color-second: rgb(37, 42, 52);
+  --back-cards: hsl(0, 4%, 13%);
+  --texto-color: rgb(251, 248, 248);
+  --button-color: rgb(4, 74, 165);
+  --button-color-light: rgb(47, 92, 150);
+  --button-color-2light: rgb(34, 47, 65);
+  
+  /* fonts */
+
+  }
 :root {
 /* colors */
 
@@ -361,7 +375,7 @@ width: 15rem;
 position: absolute;
 left: 50%;
 right: 50%;
-transform: translate(18%, 500%);
+transform: translate(-10%, -50%);
 }
 
 .title1 h4,
@@ -379,7 +393,7 @@ font-size: var(--paragrafo-font-size);
 position: absolute;
 left: 31%;
 right: 50%;
-transform: translate(-25%, 500%);
+transform: translate(-50%, -50%);
 }
 
 #projetos {
@@ -583,7 +597,7 @@ padding: 1rem;
 
 position: static;
 width: 15rem;
-height: 5rem;
+height: 4rem;
 
 background: var(--button-color);
 font-size: var(--menu-font-size);
@@ -593,7 +607,7 @@ order: 2;
 flex-grow: 0;
 border: none;
 border-radius: 0.5rem;
-margin: 0.3rem 1.2rem;
+margin: 0.1rem 1.2rem;
 transition: 1s;
 }
 
@@ -640,7 +654,6 @@ font-family: var(--title-font);
 color: var(--texto-color);
 }
 
-textarea::placeholder,
 input::placeholder {
 display: flex;
 position: absolute;
@@ -649,6 +662,16 @@ padding: 0.5rem 0rem;
 font-family: var(--title-font);
 font-size: var(--menu-font-size);
 }
+
+textarea::placeholder{
+display: flex;
+position: absolute;
+text-align: justify;
+padding: 1.5rem 0rem;
+font-family: var(--title-font);
+font-size: var(--menu-font-size);
+}
+
 textarea:hover,
 input:hover {
 border-bottom: 2px solid #1e69ca;
@@ -664,7 +687,7 @@ font-weight: 500;
 form textarea {
 position: static;
 width: 100%;
-height: 8rem;
+height: 6rem;
 left: calc(50% - 41rem / 2);
 
 background: var(--back-cards);
@@ -672,7 +695,7 @@ font-family: var(--title-font);
 color: var(--texto-color);
 
 border-radius: 0.65rem;
-margin: 0.5rem 1rem;
+margin: 0.1rem 1rem;
 resize: none;
 border: none;
 }
@@ -685,7 +708,7 @@ height: 3.5rem;
 border-radius: 0.25rem;
 border: none;
 border-style: none;
-margin: 0.5rem 1rem;
+margin: .1rem 1rem;
 }
 
 textarea:focus,
@@ -735,34 +758,32 @@ color: #e74c3c;
 
 /* Back to top */
 .back-to-top {
-width: 2rem;
-height: 2rem;
+  display: block;
+  position: fixed;
+  padding: .5rem .5rem;
+  justify-content: center;
+  background: var(--button-color);
+  color:  var(--back-cards);
+  font-size: .9rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 33rem 90%;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 50%;
+  transition: .5s;
 }
-.back-to-top {
-background: var();
-color: var(--button-color);
 
-position: fixed;
-right: 1rem;
-bottom: 1rem;
-
-padding: 0.5rem;
-clip-path: circle();
-
-font-size: 1.5rem;
-line-height: 0;
-
-visibility: hidden;
-opacity: 0;
-
-transition: 0.3s;
-transform: translateY(100%);
+.back-to-top:hover {
+  opacity: unset;
+  transform: scale(1.2);
 }
-.back-to-top.show {
-visibility: visible;
-opacity: 1;
-transform: translateY(0);
+
+.back-to-top.active {
+  visibility: visible;
 }
+
 
 footer {
 position: absolute;
@@ -944,9 +965,9 @@ nav .icon-menu {
 
 .profile {
   position: absolute;
-  width: 20rem;
-  height: 20rem;
-  left: 70%;
+  width: 18rem;
+  height: 18rem;
+  left: 75%;
 
   border-radius: 50%;
   transition: 1s;
@@ -1131,6 +1152,7 @@ nav .icon-menu {
 
 .big-card:hover {
   filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+  transform: scale(1.1);
 }
 
 .title1 {
@@ -1138,7 +1160,7 @@ nav .icon-menu {
   position: absolute;
   left: 50%;
   right: 50%;
-  transform: translate(15%, 500%);
+  transform: translate(30%, 500%);
 }
 
 .title1 h4,
@@ -1156,7 +1178,7 @@ nav .icon-menu {
   position: absolute;
   left: 31%;
   right: 50%;
-  transform: translate(-50%, 500%);
+  transform: translate(-45%, 380%);
 }
 
 #projetos {
@@ -1270,7 +1292,7 @@ nav .icon-menu {
   flex-grow: 0;
   border-radius: 0.5rem;
   margin: auto;
-  transition: 1s;
+  transition: .6s;
 }
 
 .button-ligth {
@@ -1580,11 +1602,9 @@ ul.grid a{
   gap:0.5rem;    
 }
 #nav.active .grid{
-  
-  height: calc(100vh - 4.3rem);
+    height: calc(100vh - 4.3rem);
   visibility: visible;
   overflow-y: auto;
-
 }
 
 #btnMenu{
@@ -1890,12 +1910,12 @@ margin: 0px 0px;
 }
 
 .title1{
-    margin: 5rem -54%;
+    margin: 1rem -54%;
 }
 
 .title2{
   width: 100%;
-  margin: 31rem 24%;
+  margin: 24rem 24%;
 }
 
 
@@ -1917,20 +1937,25 @@ order: 1;
 align-self: stretch;
 flex-grow: 0;
 margin: 2rem 30%;
-  }
+}
+
+.big-card{
+  width: 20rem;
+  height: 15rem;
+}
 
 #projetos{
 position: absolute;
 width: 100%;
 height: 50rem;
-left: 0px;
-top: 200rem;
+left: 0rem;
+top: 0rem;
 
 flex: none;
 order: 6;
 align-self: stretch;
 flex-grow: 0;
-margin: 0px 50%;
+margin: 200rem 50%;
 
 }
 
@@ -2070,6 +2095,11 @@ margin: .5rem auto;
 font-size: .7rem;
 }
 
+.back-to-top {
+  position: fixed;
+  margin: 48rem 47%  ;
+}
+
 footer{
 position: absolute;
 width: 100%;
@@ -2159,7 +2189,7 @@ ul.grid a{
   position: absolute;
   display: flex;
   margin:  -1.2rem auto;
-  margin-left: -5%;
+  margin-left: -8%;
 
   border: none;
   background: none;
@@ -2643,6 +2673,12 @@ margin: 0rem 0rem;
     margin: .5rem auto;
     font-size: 1rem;
   }
+
+  .back-to-top {
+    position: fixed;
+    margin: 48rem 47%  ;
+  }
+  
 
  footer{
     position: absolute;

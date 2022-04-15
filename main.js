@@ -7,6 +7,31 @@ function toggleMenu() {
 }
 btnMenu.addEventListener('click', toggleMenu)
 
+/* quando clicar em um item do menu, esconder o menu */
+const links = document.querySelectorAll('nav ul li a')
+
+for (const link of links) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('active')
+  })
+}
+
+/* Botão voltar para o topo */
+
+const backToTopButton = document.querySelector('.back-to-top')
+
+function backToTop() {
+  if (window.scrollY >= 30) {
+    backToTopButton.classList.add('active')
+  } else {
+    backToTopButton.classList.remove('active')
+  }
+}
+
+window.addEventListener('scroll', function () {
+  backToTop()
+})
+
 //validando form
 //
 //
@@ -85,15 +110,4 @@ function checkEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   )
-}
-
-/* Botão voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top')
-
-function backToTop() {
-  if (window.scrollY >= 60) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
 }
