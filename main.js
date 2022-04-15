@@ -21,7 +21,7 @@ for (const link of links) {
 const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
-  if (window.scrollY >= 30) {
+  if (window.scrollY >= 356) {
     backToTopButton.classList.add('active')
   } else {
     backToTopButton.classList.remove('active')
@@ -41,7 +41,6 @@ const email = document.getElementById('email')
 const mensagem = document.getElementById('mensagem')
 form.addEventListener('submit', e => {
   e.preventDefault()
-
   checkInputs()
 })
 
