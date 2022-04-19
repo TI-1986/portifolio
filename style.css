@@ -1496,9 +1496,34 @@ border: 0 none;
 outline: 0;
 }
 
-.back-to-top{
-margin: 56rem 94%;
-}
+/* Back to top */
+.back-to-top {
+  display: block;
+  position: fixed;
+  padding: .5rem .5rem;
+  justify-content: center;
+  background: var(--button-color);
+  color:  var(--back-cards);
+  font-size: .9rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 34rem 95%;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 50%;
+  transition: .5s;
+  }
+  
+  .back-to-top:hover {
+  opacity: unset;
+  transform: scale(1.2);
+  }
+  
+  .back-to-top.active {
+  visibility: visible;
+  }
+  
 
 footer {
 position: absolute;
@@ -2106,7 +2131,7 @@ font-size: .7rem;
 
 .back-to-top {
 position: fixed;
-margin: 88% 45%  ;
+margin: 90% 45%  ;
 }
 
 footer{
