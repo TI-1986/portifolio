@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio - Challenge Oracle+Alura</title>
+    <title>Portifolio - Tiago de Oliveira</title>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="assets/icomoon (1)/style.css" />
@@ -14,8 +14,7 @@
       <div id="logo">
         <a href="#" class="name">
           <i class="icon-angellist"></i>
-          Tiago de Oliveira</a
-        >
+         Tiago de Oliveira</a>       
       </div>
       <nav id="nav" class="container">
           <div id="menu">
@@ -28,8 +27,10 @@
             <li>
               <a class="contato" href="#contato"
                 ><i class="icon-outlook"></i> ti.1986@hotmail.com</a
-              >
+              >              
                </li>
+               <input type="checkbox" name="dark-mode" id="dark">
+               <label for="dark" class="btn-dark"></label>
             </ul>
         </div>
         <button id="btnMenu">
@@ -241,7 +242,7 @@
             possivel.
           </p>
 
-          <form action="mailto:ti.1986@hotmail.com" method="post" enctype="text/plain" id="form" class="form">
+          <form action="mailto:ti.1986@hotmail.com" method="get" enctype="text/plain" id="form" class="form">
           <div class="form-control">
                   <input type="text"
               id="username"
@@ -283,7 +284,7 @@
               <small>Mensagem de erro</small>
             </div>
     
-            <button class="btn" type="submit">Enviar mensagem</button>
+            <button class="btn" type="submit" value="Send">Enviar mensagem</button>
           </form>
         </div>
           </div>

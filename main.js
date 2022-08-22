@@ -84,6 +84,7 @@ function checkInputs() {
 
   if (formIsValid) {
     console.log('O formulário está 100% válido!')
+    document.getElementById('send')
   }
 }
 
@@ -110,3 +111,12 @@ function checkEmail(email) {
     email
   )
 }
+
+/**Dark-mode */
+
+const $html = document.querySelector('html')
+const $checkbox = document.querySelector('#dark')
+
+$checkbox.addEventListener('change', function () {
+  $html.classList.toggle('dark-mode')
+})
