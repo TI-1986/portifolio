@@ -80,10 +80,10 @@ body {
 
 .btn-dark{
   display: inline-block;
-  width: 90px;
-  height: 35px;
+  width: 60px;
+  height: 25px;
   border: 2px var(--border-color);
-  background-color: rgb(161, 151, 151);
+  background-color: rgb(168, 177, 243);
   border-radius: 20px;
   position: relative;
   cursor: pointer;
@@ -91,15 +91,15 @@ body {
 
 .btn-dark::after {
   content: url('./assets/sun.svg');
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-color: #e74c3c;
-  border: 2px solid var(--);
+  border: 2px solid var(--border-color);
   border-radius: 50%;
   box-shadow: 0 0 5px var(--border-color);
   position: absolute;
-  top: 5px;
-  left: 9%;
+  top: .5px;
+  left: 4%;
   display: grid;
   place-content: center;
   line-height: 0;
@@ -110,8 +110,8 @@ body {
 
 #dark:checked + .btn-dark::after{
   content: url('./assets/moon.svg');
-  background-color: var(--button-color);
-  transform: translateX(50px)rotate(360deg);
+  background-color: #1685fb;
+  transform: translateX(30px)rotate(360deg);
 }
 
 #header {
@@ -146,10 +146,16 @@ nav .grid {
   margin: 7rem;
 }
 
+.name{
+  display: flex;
+  width: 15rem;
+  
+}
+
 .name i {
   width: 1.2em;
   height: 1.2rem;
-  padding-left: 0.5rem;
+  padding-left: -10rem;
   color: var(--button-color);
 }
 
@@ -470,7 +476,7 @@ nav .grid {
 
   width: 40rem;
   height: 22rem;
-  left: 50%;
+  left: 67%;
   right: 50%;
   transform: translate(-90%, -50%);
   border-radius: 1.8rem;
@@ -483,18 +489,23 @@ nav .grid {
 }
 
 .projeto-title.atelie {
-  width: 20rem;
+  width: 40rem;
   height: 22rem;
   margin-top: 4rem;
+  left: 105%;
 }
 
 .projeto-title.forca {
-  width: 20rem;
+  width: 40rem;
   height: 20rem;
+  left: 105%;
+
 }
 .projeto-title.cripto {
-  width: 20rem;
+  width: 40rem;
   height: 19.5rem;
+  left: 105%;
+
 }
 
 .projeto-title {
@@ -508,11 +519,12 @@ nav .grid {
   padding-top: 1.5rem;
   left: 50%;
   right: 50%;
-  transform: translate(35%, -50%);
-
+  transform: translate(-180%, -50%);
+  opacity: 0%;
   box-shadow: 0 8px 32px 0 rgb(190, 218, 255);
   border-radius: 1.6rem;
 }
+
 .projeto-title:hover {
   background: rgba(129, 128, 128, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -520,6 +532,7 @@ nav .grid {
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 1.6rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: unset;
 }
 
 .projeto-title h5 {
@@ -576,7 +589,7 @@ nav .grid {
 
   background: var(--button-color);
   font-size: var(--menu-font-size);
-  color: var(--back-cards);
+  color: var(--texto-color);
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -651,7 +664,7 @@ button.btn:hover,
 
   background: var(--button-color);
   font-size: var(--menu-font-size);
-  color: var(--back-cards);
+  color: var(--texto-color);
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -883,8 +896,7 @@ footer .social a:hover {
 }
 
 /**media queries**/
-
-@media only screen and (max-width: 1360px) {
+@media only screen and (min-width: 901px) and (max-width: 1360px) {
   #header {
     position: absolute;
     display: flex;
@@ -1254,7 +1266,7 @@ footer .social a:hover {
 
     width: 40rem;
     height: 22rem;
-    left: 50%;
+    left: 70%;
     right: 50%;
     transform: translate(-90%, -50%);
     border-radius: 1.8rem;
@@ -1267,18 +1279,21 @@ footer .social a:hover {
   }
 
   .projeto-title.atelie {
-    width: 20rem;
+    width: 40rem;
     height: 22rem;
     margin-top: 4rem;
+    left: 10%;
   }
 
   .projeto-title.forca {
-    width: 20rem;
+    width: 40rem;
     height: 20rem;
+    left: 10%;
   }
   .projeto-title.cripto {
-    width: 20rem;
+    width: 40rem;
     height: 19.5rem;
+    left: 10%;
   }
 
   .projeto-title {
@@ -1290,10 +1305,10 @@ footer .social a:hover {
     text-align: center;
     margin: 3rem 0;
     padding-top: 1.5rem;
-    left: 50%;
+    left: 20%;
     right: 50%;
     transform: translate(35%, -50%);
-
+    opacity: 0%;
     box-shadow: 0 8px 32px 0 rgb(190, 218, 255);
     border-radius: 1.6rem;
   }
@@ -1304,6 +1319,7 @@ footer .social a:hover {
     -webkit-backdrop-filter: blur(13.5px);
     border-radius: 1.6rem;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    opacity: unset;
   }
 
   .projeto-title h5 {
@@ -1630,7 +1646,7 @@ footer .social a:hover {
     width: 101%;
     height: 5rem;
     margin: auto;
-    left: 0px;
+    left: 0rem;
     top: 0px;
   }
   #container {
@@ -2172,8 +2188,569 @@ footer .social a:hover {
     width: 100%;
     height: 10rem;
     left: 0px;
-    top: 278rem;
+    top: 275rem;
+    padding: 1.5rem;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 50%;
+  }
+}
+
+@media only screen and (min-width:509PX ) and (max-width: 767px)  {
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
+    background: var(--base-color-second);
+    position: absolute;
+
+    width: 100%;
+    height: 5rem;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .name {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+
+  nav .grid {
+    position: absolute;
+    display: block;
+
+    visibility: hidden;
+    overflow-y: hidden;
+
+    width: 100%;
+    top: -3.5rem;
+    right: -7rem;
+    background: var(--base-color-second);
+    height: 0rem;
+    transition: 0.6s;
+    z-index: 1000;
+  }
+
+  ul.grid a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+
+    border-bottom: 2px solid var(--button-color-2light);
+  }
+
+  .contato {
+    display: flex;
+    gap: 0.5rem;
+  }
+  #nav.active .grid {
+    height: calc(100vh - 4.3rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #btnMenu {
+    position: absolute;
+    display: flex;
+    margin: -1.2rem auto;
+    margin-left: -8%;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    padding: 0.5rem 1rem;
+  }
+
+  #iconMenu {
+    border-top: 0.12rem solid;
+    width: 1.5rem;
+    color: var(--button-color);
+  }
+
+  #iconMenu::after,
+  #iconMenu::before {
+    content: ' ';
+    display: block;
+    width: 1.5rem;
+    height: 0.12rem;
+    margin-top: 0.3rem;
+    background-color: currentColor;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #iconMenu {
+    border-top-color: transparent;
+  }
+
+  #nav.active #iconMenu::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #iconMenu::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  #link {
+    display: flex;
+    width: 100%;
+  }
+
+  .link {
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: -3rem 1rem;
+    width: 10rem;
+    height: 3rem;
+  }
+
+  #home {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    left: 0px;
+    top: 56px;
+  }
+
+  #home h1 {
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    left: 0px;
+    top: 0px;
+
+    font-size: 2.2rem;
+    line-height: 2rem;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: -1.2rem 0px;
+  }
+
+  #home p {
+    position: absolute;
+    text-align: justify;
+    width: 100%;
+    height: 4rem;
+    left: 0px;
+    top: 2.2rem;
+
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+  }
+
+  .perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0rem;
+
+    position: static;
+    width: 30rem;
+    height: 18rem;
+    left: 0px;
+    top: 20rem;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 1.5rem -1rem;
+
+    font-size: 14px;
+  }
+
+  #link {
+    width: 100%;
+    margin: 0 -1rem;
+  }
+
+  .profile {
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    left: 0px;
+    top: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: -7rem 1rem;
+  }
+
+  #sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    left: 0px;
+    top: 10rem;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 5rem 0px;
+  }
+
+  #sobre h2 {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    left: 1rem;
+    top: 2rem;
+  }
+
+  #sobre p {
+    position: absolute;
+    display: block;
+    width: 40rem;
+    height: 26rem;
+    left: 0px;
+    top: 0rem;
+
+    font-size: 1.2rem;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 4rem 1rem;
+  }
+
+  #sobre img {
+    width: 15rem;
+    height: 9rem;
+    margin: 19rem 0rem 0rem -35rem;
+  }
+
+  #skills {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    left: 0px;
+    top: 58rem;
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+  }
+
+  #skills h3 {
+    font-size: 2rem;
+  }
+
+  #hobbies {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    left: 0px;
+    top: 85rem;
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+  }
+
+  #hobbies h3 {
+    font-size: 2rem;
+  }
+
+  #hobbies .cards {
+    display: grid;
+  }
+
+  .cards {
+    position: absolute;
+    display: grid;
+    width: 70%;
+    margin: 1rem 15%;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 0.1fr));
+  }
+
+  .card {
+    width: 9rem;
+    height: 8rem;
+    padding: 4rem;
+    padding-block: 3rem;
+    border-radius: 4%;
+    display: block;
+
+    background: var(--back-cards);
+    transition: 0.5s;
+  }
+
+  .card:hover {
+    filter: drop-shadow(0px 4px 4px rgba(85, 149, 233, 1));
+    transform: scale(1.1);
+  }
+
+  .card img {
+    width: 1rem;
+    height: 1rem;
+    margin: 2rem -3.5rem 0rem;
+  }
+
+  .card p {
+    margin: 0.2rem -3.5rem;
+    position: absolute;
+    font-size: 0.7rem;
+  }
+
+  #formacao {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    position: absolute;
+    width: 100%;
+    height: 60rem;
+    left: 0px;
+    top: 118rem;
+
+    background: var(--base-color-second);
+    flex: none;
+    order: 5;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+  }
+
+  #formacao h3 {
+    display: flex;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: -3rem;
+  }
+
+  .title1 {
+    margin: 0rem 0.1rem;
+  }
+
+  .title2 {
+    justify-content: center;
+    width: 100%;
+    margin: 26rem -25rem;
+  }
+
+  .big-cards {
+    display: grid;
+    gap: 8rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    left: 0;
+    top: 90px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 2rem 54%;
+  }
+
+  #projetos {
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    left: 0px;
+    top: 198rem;
+
+    flex: none;
+    order: 6;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 50%;
+  }
+
+  #projetos h3 {
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+
+  #projetos img {
+    width: 30rem;
+    height: 15rem;
+    left: 0rem;
+    top: 0rem;
+
+    border-radius: 1em;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 1rem auto;
+  }
+  .projeto-img {
+    position: absolute;
+    display: grid;
+    margin: 1rem 15rem;
+  }
+
+  .projeto-img:hover {
+    cursor: pointer;
+  }
+
+  .projeto-title.cripto,
+  .projeto-title.forca,
+  .projeto-title.atelie {
+    position: relative;
+    width: 30rem;
+    height: 16rem;
+    top: -1.9rem;
+    margin: 1.7rem -26.5rem;
+    opacity: 0%;
+  }
+
+  .projeto-title.cripto:hover,
+  .projeto-title.forca:hover,
+  .projeto-title.atelie:hover {
+    opacity: unset;
+  }
+
+  .projeto-title.atelie {
+    top: -3rem;
+  }
+
+  .projeto-title h5,
+  .projeto-title p,
+  .projeto-title a {
+    font-size: 1rem;
+  }
+  .button,
+  .button-ligth {
+    width: 10rem;
+    height: 3rem;
+    margin: 0.5rem auto;
+  }
+
+  #contato {
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    left: 0%;
+    top: 250rem;
+    padding: 1rem;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0rem 0rem;
+  }
+
+  #contato img {
+    display: none;
+  }
+
+  #form {
+    margin-left: -20rem;
+    margin-top: 2.5rem;
+  }
+
+  #form input {
+    height: 2.5rem;
+    margin-top: -0.5rem;
+  }
+
+  #form textarea {
+    height: 5rem;
+    margin-top: -0.5rem;
+  }
+
+  #form input::placeholder {
+    font-size: 1rem;
+    margin: -1% 0%;
+  }
+
+  #form textarea::placeholder {
+    font-size: 1rem;
+    margin: -3% 0%;
+  }
+
+  .form-control i {
+    position: absolute;
+    top: 7.2rem;
+    right: 0.6rem;
+  }
+
+  #contato .info h3 {
+    display: flex;
+    position: relative;
+    font-size: 2rem;
+    margin: 1rem -19rem;
+  }
+
+  .info p {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0rem -19rem;
+  }
+  .info button {
+    width: 15rem;
+    height: 4rem;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+  }
+
+  .back-to-top {
+    position: fixed;
+    margin: 90% 85%;
+  }
+
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    left: 0px;
+    top: 295rem;
+    padding: 1.5rem;
 
     flex: none;
     order: 1;
@@ -2725,7 +3302,7 @@ footer .social a:hover {
 
   .back-to-top {
     position: fixed;
-    margin: 125% 65%;
+    margin: 90% 85%;
   }
 
   footer {
@@ -2733,8 +3310,8 @@ footer .social a:hover {
     width: 100%;
     height: 10rem;
     left: 0px;
-    top: 298rem;
-    padding: 1rem;
+    top: 295rem;
+    padding: 1.5rem;
 
     flex: none;
     order: 1;
