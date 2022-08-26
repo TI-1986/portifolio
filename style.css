@@ -2025,7 +2025,7 @@ footer .social a:hover {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    margin: 2rem 39.5%;
+    margin: 2rem 36.5%;
   }
 
   .big-card {
@@ -2069,7 +2069,7 @@ footer .social a:hover {
   .projeto-img {
     position: absolute;
     display: grid;
-    margin: 1rem 26rem;
+    margin: 1rem 22rem;
   }
 
   .projeto-img:hover {
@@ -2083,7 +2083,7 @@ footer .social a:hover {
     width: 19rem;
     height: 10rem;
     top: -5rem;
-    margin: 2rem -17rem;
+    margin: 2rem 10.5rem;
     opacity: 0%;
   }
 
