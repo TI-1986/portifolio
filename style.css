@@ -855,9 +855,10 @@ footer {
   justify-content: center;
   background: var(--body-color);
   margin-top: 275rem;
+  padding: 2rem;
   width: 100%;
   max-width: 1920px;
-  height: 10rem;
+  height: 15rem;
   left: 50%;
   right: 50%;
 
@@ -868,6 +869,7 @@ footer .brand p {
   font-family: var(--title-font);
   font-size: var(--paragrafo-font-size);
   color: var(--texto-color);
+  
   margin-bottom: 0.75rem;
   line-height: 0.5rem;
 }
