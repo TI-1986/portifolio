@@ -2085,7 +2085,7 @@ footer .social a:hover {
     width: 19rem;
     height: 10rem;
     top: -5rem;
-    margin: 2rem 10.5rem;
+    margin: 2rem 10rem;
     opacity: 0%;
   }
 
@@ -2201,7 +2201,7 @@ footer .social a:hover {
   }
 }
 
-@media only screen and (min-width:509PX ) and (max-width: 767px)  {
+@media only screen and (min-width:511PX ) and (max-width: 767px)  {
   #header {
     display: flex;
     flex-direction: row;
