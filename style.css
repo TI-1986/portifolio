@@ -2002,12 +2002,12 @@ footer .social a:hover {
   }
 
   .title1 {
-    margin: -3.1rem 0.4rem;
+    margin: -3.1rem 0.8rem;
   }
 
   .title2 {
     width: 100%;
-    margin: 19.9rem -25rem;
+    margin: 19.9rem -6.8rem;
   }
 
   .big-cards {
@@ -2027,7 +2027,7 @@ footer .social a:hover {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    margin: 2rem 36.5%;
+    margin: 2rem 37%;
   }
 
   .big-card {
