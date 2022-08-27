@@ -898,7 +898,7 @@ footer .social a:hover {
 }
 
 /**media queries**/
-@media only screen and (min-width: 901px) and (max-width: 1360px) {
+@media only screen and (min-width: 901px) and (max-width: 1600px) {
   #header {
     position: absolute;
     display: flex;
@@ -1305,7 +1305,7 @@ footer .social a:hover {
     justify-items: center;
     align-items: center;
     text-align: center;
-    margin: 3rem 0;
+    margin: 3rem 0rem;
     padding-top: 1.5rem;
     left: 20%;
     right: 50%;
